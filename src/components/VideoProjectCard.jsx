@@ -17,17 +17,19 @@ export default function VideoProjectCard({
 
     const handleMouseEnter = () => {
         if (videoRef.current) {
-            if (!videoRef.current.src) {
-                videoRef.current.src = videoSrc;
-            }
             videoRef.current.play().catch(() => { });
-            setIsPlaying(true);
         }
+    };
+
+    const handleVideoPlaying = () => {
+        setIsPlaying(true);
     };
 
     const handleMouseLeave = () => {
         if (videoRef.current) {
             videoRef.current.pause();
+            // Optional: reset to start
+            // videoRef.current.currentTime = 0;
             setIsPlaying(false);
         }
     };
@@ -36,13 +38,42 @@ export default function VideoProjectCard({
         <div className="project-card" data-aos="fade-up" data-aos-delay={delay}>
             <div
                 className="project-image video-wrapper"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
+                <video
+                    ref={videoRef}
+                    src={videoSrc}
+                    className="project-video"
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    onPlaying={handleVideoPlaying}
+                    onPause={() => setIsPlaying(false)}
+                    style={{
+                        opacity: isPlaying ? 1 : 0,
+                        pointerEvents: "none",
+                        willChange: "opacity"
+                    }}
+                />
                 <img
                     src={imgSrc}
                     alt={title}
                     className="poster-img"
                     loading="lazy"
+                    style={{
+                        opacity: isPlaying ? 0 : 1,
+                        willChange: "opacity"
+                    }}
                 />
+                {!isPlaying && (
+                    <div className="play-icon-overlay" style={{ pointerEvents: "none" }}>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                )}
             </div>
 
             <div className="project-content">

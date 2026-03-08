@@ -1,10 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function CustomCursor() {
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [followerPosition, setFollowerPosition] = useState({ x: 0, y: 0 });
+    const dotRef = useRef(null);
+    const outlineRef = useRef(null);
+    const mousePos = useRef({ x: 0, y: 0 });
+    const dotPos = useRef({ x: 0, y: 0 });
+    const outlinePos = useRef({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -17,7 +20,7 @@ export default function CustomCursor() {
         window.addEventListener("resize", checkMobile);
 
         const onMouseMove = (e) => {
-            setPosition({ x: e.clientX, y: e.clientY });
+            mousePos.current = { x: e.clientX, y: e.clientY };
         };
 
         const onMouseOver = (e) => {
@@ -32,17 +35,28 @@ export default function CustomCursor() {
         window.addEventListener("mouseover", onMouseOver);
 
         let animationFrameId;
-        const speed = 0.15;
+        const animate = () => {
+            // Smoothly move dot to mouse pos
+            dotPos.current.x += (mousePos.current.x - dotPos.current.x) * 0.8;
+            dotPos.current.y += (mousePos.current.y - dotPos.current.y) * 0.8;
 
-        const animateFollower = () => {
-            setFollowerPosition((prev) => ({
-                x: prev.x + (position.x - prev.x) * speed,
-                y: prev.y + (position.y - prev.y) * speed,
-            }));
-            animationFrameId = requestAnimationFrame(animateFollower);
+            // Move outline to dot pos with trail
+            outlinePos.current.x += (dotPos.current.x - outlinePos.current.x) * 0.15;
+            outlinePos.current.y += (dotPos.current.y - outlinePos.current.y) * 0.15;
+
+            if (dotRef.current) {
+                dotRef.current.style.left = `${dotPos.current.x}px`;
+                dotRef.current.style.top = `${dotPos.current.y}px`;
+            }
+            if (outlineRef.current) {
+                outlineRef.current.style.left = `${outlinePos.current.x}px`;
+                outlineRef.current.style.top = `${outlinePos.current.y}px`;
+            }
+
+            animationFrameId = requestAnimationFrame(animate);
         };
 
-        animateFollower();
+        animate();
 
         return () => {
             window.removeEventListener("resize", checkMobile);
@@ -50,25 +64,19 @@ export default function CustomCursor() {
             window.removeEventListener("mouseover", onMouseOver);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [position.x, position.y]);
+    }, []);
 
     if (isMobile) return null;
 
     return (
         <>
             <div
+                ref={dotRef}
                 className={`custom-cursor ${isHovered ? "cursor-hover" : ""}`}
-                style={{
-                    left: `${position.x}px`,
-                    top: `${position.y}px`,
-                }}
             />
             <div
+                ref={outlineRef}
                 className={`cursor-follower ${isHovered ? "cursor-hover" : ""}`}
-                style={{
-                    left: `${followerPosition.x}px`,
-                    top: `${followerPosition.y}px`,
-                }}
             />
         </>
     );

@@ -12,6 +12,10 @@
 
 .project-card {
   border: 1px solid var(--text-secondary);
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .projects-cta {
@@ -67,9 +71,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   z-index: 1;
+  will-change: opacity;
+  transform: translateZ(0);
 }
 
 .project-video {
@@ -80,9 +86,11 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
   background: transparent !important;
+  will-change: opacity;
+  transform: translateZ(0);
   /* Critical: no black bg */
 }
 
