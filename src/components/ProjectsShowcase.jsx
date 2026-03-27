@@ -190,12 +190,18 @@ export default function ProjectsShowcase() {
                 </div>
 
                 <div className="projects-grid" id="projects-grid">
-                    {filteredProjects.map((project, index) => (
-                        <VideoProjectCard
-                            key={index}
-                            {...project}
-                        />
-                    ))}
+                    {filteredProjects.map((project, index) => {
+                        const isEager = index < 3;
+                        const aosDelay = isEager ? String((index + 1) * 100) : "0";
+                        return (
+                            <VideoProjectCard
+                                key={project.title}
+                                {...project}
+                                delay={aosDelay}
+                                loadEager={isEager}
+                            />
+                        );
+                    })}
                 </div>
             </div>
         </section>

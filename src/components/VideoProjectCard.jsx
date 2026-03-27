@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function VideoProjectCard({
     title,
@@ -10,26 +10,55 @@ export default function VideoProjectCard({
     videoSrc,
     liveLink,
     githubLink,
-    delay = "200",
+    delay = "0",
+    loadEager = false,
 }) {
     const videoRef = useRef(null);
+    const wrapperRef = useRef(null);
+    const [isReady, setIsReady] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
+
+    // Preload video when it scrolls into view (or immediately if loadEager)
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        if (loadEager) {
+            video.preload = "auto";
+            video.load();
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        video.preload = "auto";
+                        video.load();
+                        observer.disconnect();
+                    }
+                });
+            },
+            { rootMargin: "200px" } // start loading 200px before entering viewport
+        );
+
+        if (wrapperRef.current) observer.observe(wrapperRef.current);
+        return () => observer.disconnect();
+    }, [loadEager]);
 
     const handleMouseEnter = () => {
         if (videoRef.current) {
-            videoRef.current.play().catch(() => { });
+            videoRef.current.play().catch(() => {});
+            // Show video immediately if enough data is buffered
+            if (videoRef.current.readyState >= 3) {
+                setIsPlaying(true);
+            }
         }
-    };
-
-    const handleVideoPlaying = () => {
-        setIsPlaying(true);
     };
 
     const handleMouseLeave = () => {
         if (videoRef.current) {
             videoRef.current.pause();
-            // Optional: reset to start
-            // videoRef.current.currentTime = 0;
             setIsPlaying(false);
         }
     };
@@ -37,6 +66,7 @@ export default function VideoProjectCard({
     return (
         <div className="project-card" data-aos="fade-up" data-aos-delay={delay}>
             <div
+                ref={wrapperRef}
                 className="project-image video-wrapper"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -48,8 +78,9 @@ export default function VideoProjectCard({
                     loop
                     muted
                     playsInline
-                    preload="metadata"
-                    onPlaying={handleVideoPlaying}
+                    preload="none"
+                    onCanPlay={() => { if (isPlaying) setIsPlaying(true); }}
+                    onPlaying={() => setIsPlaying(true)}
                     onPause={() => setIsPlaying(false)}
                     style={{
                         opacity: isPlaying ? 1 : 0,
