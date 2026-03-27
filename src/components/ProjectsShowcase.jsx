@@ -6,6 +6,33 @@ import AOS from "aos";
 
 const PROJECTS = [
     {
+        title: "Callavan",
+        description: "Real-time driver tracking app using Webflow (frontend) and Supabase (backend) to connect users with nearby drivers.",
+        tech: ["Webflow","CMS", "Supabase"],
+        imgSrc: "/imgs/callavan.jpg",
+        videoSrc: "/imgs/vids/callavan.webm",
+        liveLink: "https://alexanders-amazing-site-09beaa.webflow.io/",
+        category: "web & api",
+    },
+    {
+        title: "Protek Solutions",
+        description: "Modern responsive corporate website using Next.js & Bootstrap with a clean, interactive design for eco-friendly solutions.",
+        tech: ["Bootstrap","React", "Next.js"],
+        imgSrc: "/imgs/protek.jpg",
+        videoSrc: "/imgs/vids/Protek.webm",
+        liveLink: "https://www.proteksolutions.ca/",
+        category: "web",
+    },
+    {
+        title: "SouthLa Cafe",
+        description: "A modern, responsive website built with Webflow CMS, showcasing South LA Cafe’s community-driven cafés focused on jobs and local resilience.",
+        tech: ["Webflow", "Interactions", "CMS"],
+        imgSrc: "/imgs/southla.jpg",
+        videoSrc: "/imgs/vids/southla.webm",
+        liveLink: "https://south-la-cafe.webflow.io/",
+        category: "wordpress",
+    },
+    {
         title: "ExhibitsUSA",
         description: "A streamlined platform bringing regional art to audiences everywhere while empowering artists and cultural organizations.",
         tech: ["Webflow", "Interactions", "CMS"],
@@ -28,7 +55,7 @@ const PROJECTS = [
         description: "A web platform for testing and visualizing regex patterns, showing real-time matches, pattern validity, and DFA state transitions.",
         tech: ["Tailwind", "React", "Typescript"],
         imgSrc: "/imgs/regex.jpg",
-        videoSrc: "/imgs/vids/RegexTool.mp4",
+        videoSrc: "/imgs/vids/RegexTool.webm",
         liveLink: "https://regex-tool-1.vercel.app/",
         category: "web",
     },

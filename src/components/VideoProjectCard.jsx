@@ -48,7 +48,7 @@ export default function VideoProjectCard({
 
     const handleMouseEnter = () => {
         if (videoRef.current) {
-            videoRef.current.play().catch(() => {});
+            videoRef.current.play().catch(() => { });
             // Show video immediately if enough data is buffered
             if (videoRef.current.readyState >= 3) {
                 setIsPlaying(true);
