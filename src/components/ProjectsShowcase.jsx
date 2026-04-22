@@ -6,12 +6,21 @@ import AOS from "aos";
 
 const PROJECTS = [
     {
+        title: "Integriti-MS",
+        description: "A CMS using React, TypeScript, and Next.js to manage clients, developers, deadlines, tasks, and generate complete team performance reports.",
+        tech: ["React","Typescript", "Next.js"],
+        imgSrc: "/imgs/integritiMs.jpg",
+        videoSrc: "/imgs/vids/Integriti-MS.webm",
+        liveLink: "https://integriti-ms-2j3k.vercel.app/",
+        category: "web & api",
+    },
+    {
         title: "Callavan",
         description: "Real-time driver tracking app using Webflow (frontend) and Supabase (backend) to connect users with nearby drivers.",
         tech: ["Webflow","CMS", "Supabase"],
         imgSrc: "/imgs/callavan.jpg",
         videoSrc: "/imgs/vids/callavan.webm",
-        liveLink: "https://alexanders-amazing-site-09beaa.webflow.io/",
+        liveLink: "https://www.callavan.live/",
         category: "web & api",
     },
     {
