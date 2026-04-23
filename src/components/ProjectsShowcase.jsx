@@ -42,6 +42,15 @@ const PROJECTS = [
         category: "wordpress",
     },
     {
+        title: "PumpRack",
+        description: "A modern, inventory platform for industrial pumps and parts with categorized browsing, service listings, and a search-focused user interface.",
+        tech: ["Shopify", "Liquid", "Shopify CLI"],
+        imgSrc: "/imgs/pumprack.jpg",
+        videoSrc: "/imgs/vids/pumprack.webm",
+        liveLink: "https://pumprack.com/",
+        category: "wordpress",
+    },
+    {
         title: "Email Forge",
         description: "The Email Forge builds and operates lifecycle retention infrastructure for eCommerce brands driving compounding growth without extra ad spend.",
         tech: ["WordPress", "Elementor", "PHP"],
@@ -49,6 +58,15 @@ const PROJECTS = [
         videoSrc: "/imgs/vids/EmailForge.webm",
         liveLink: "https://theemailforge.com/",
         category: "wordpress",
+    },
+        {
+        title: "Sociolyze",
+        description: "A static marketing and portfolio website built with Eleventy for scalable multi-page content using reusable templates and plain HTML output.",
+        tech: ["Eleventy", "Bootstrap", "JQuery"],
+        imgSrc: "/imgs/sociolyze.jpg",
+        videoSrc: "/imgs/vids/sociolyze.webm",
+        liveLink: "https://sociolyze-4ha4.vercel.app/",
+        category: "web",
     },
     {
         title: "ExhibitsUSA",
