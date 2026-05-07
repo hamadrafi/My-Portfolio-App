@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ClientScripts from "@/components/ClientScripts";
+import StatCounter from "@/components/StatCounter";
 
 export default function About() {
   return (
@@ -39,15 +40,21 @@ export default function About() {
                 </div>
                 <div className="about-stats">
                   <div className="stat-item">
-                    <div className="stat-number">2+</div>
+                    <div className="stat-number">
+                      <StatCounter end="2" suffix="+" />
+                    </div>
                     <div className="stat-label">Years Experience</div>
                   </div>
                   <div className="stat-item">
-                    <div className="stat-number">20+</div>
+                    <div className="stat-number">
+                      <StatCounter end="20" suffix="+" />
+                    </div>
                     <div className="stat-label">Projects Completed</div>
                   </div>
                   <div className="stat-item">
-                    <div className="stat-number">5+</div>
+                    <div className="stat-number">
+                      <StatCounter end="5" suffix="+" />
+                    </div>
                     <div className="stat-label">Happy Clients</div>
                   </div>
                 </div>
