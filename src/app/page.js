@@ -5,7 +5,7 @@ import ClientScripts from "@/components/ClientScripts";
 import Particles from "@/components/Particles";
 import Link from "next/link";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <ClientScripts />
