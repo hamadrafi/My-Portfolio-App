@@ -1,5 +1,6 @@
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
+import Script from "next/script";
 
 export const metadata = {
   title: "Hamad Rafi - Front End Developer",
@@ -29,22 +30,26 @@ export default function RootLayout({ children }) {
           href="https://unpkg.com/aos@2.3.1/dist/aos.css"
           rel="stylesheet"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function () {
-                const savedTheme = localStorage.getItem('theme') || 'light';
-                document.documentElement.setAttribute('data-theme', savedTheme);
-              })();
-            `,
-          }}
-        />
       </head>
       <body>
         <CustomCursor />
         {children}
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        {/* We will initialize AOS in a Client Component or useEffect in individual pages */}
+        
+        {/* Load AOS library properly via next/script */}
+        <Script 
+          src="https://unpkg.com/aos@2.3.1/dist/aos.js" 
+          strategy="lazyOnload"
+        />
+        
+        {/* Inject theme script via standard script tag to avoid hydration issues */}
+        <Script id="theme-loader" strategy="beforeInteractive">
+          {`
+            (function () {
+              const savedTheme = localStorage.getItem('theme') || 'light';
+              document.documentElement.setAttribute('data-theme', savedTheme);
+            })();
+          `}
+        </Script>
       </body>
     </html>
   );
