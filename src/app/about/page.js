@@ -3,6 +3,15 @@ import Footer from "@/components/Footer";
 import ClientScripts from "@/components/ClientScripts";
 import StatCounter from "@/components/StatCounter";
 
+export const metadata = {
+  title: "About Me",
+  description:
+    "Learn about Hamad Rafi — a Front-End Developer with 2+ years of experience in React, Next.js, WordPress, and modern web design. Based in Lahore, Pakistan.",
+  alternates: {
+    canonical: "https://hamadrafi-1.vercel.app/about",
+  },
+};
+
 export default function About() {
   return (
     <>

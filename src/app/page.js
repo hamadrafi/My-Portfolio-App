@@ -4,10 +4,52 @@ import VideoProjectCard from "@/components/VideoProjectCard";
 import ClientScripts from "@/components/ClientScripts";
 import Particles from "@/components/Particles";
 import Link from "next/link";
+import Image from "next/image";
+
+// ── Page-level metadata (inherits template from layout: "%s | Hamad Rafi") ──
+export const metadata = {
+  title: "Home",
+  description:
+    "Welcome to the portfolio of Hamad Rafi — a Front-End Developer building fast, beautiful web experiences with React, Next.js, and modern CSS.",
+  alternates: {
+    canonical: "https://hamadrafi-1.vercel.app",
+  },
+};
+
+// ── JSON-LD: Person schema for Google Knowledge Panel & rich results ──
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Hamad Rafi",
+  url: "https://hamadrafi-1.vercel.app",
+  image: "https://hamadrafi-1.vercel.app/imgs/profile.jpg",
+  jobTitle: "Front-End Developer",
+  description:
+    "Hamad Rafi is a Front-End Developer with 2+ years of experience specialising in React, Next.js, Tailwind CSS, and high-performance web interfaces.",
+  sameAs: [
+    "https://github.com/hamadrafi",
+    "https://www.linkedin.com/in/hamad-rafi-33b6a6260",
+  ],
+  knowsAbout: [
+    "React",
+    "Next.js",
+    "JavaScript",
+    "Tailwind CSS",
+    "CSS3",
+    "HTML5",
+    "Framer Motion",
+    "Web Performance",
+  ],
+};
 
 export default function Page() {
   return (
     <>
+      {/* Inject JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ClientScripts />
       <Navbar />
 
@@ -19,7 +61,14 @@ export default function Page() {
         </div>
         <div className="hero-content">
           <div className="hero-image" data-aos="fade-up" data-aos-delay="100">
-            <img src="/imgs/profile.jpg" alt="Hamad Rafi" className="profile-image" />
+            <Image
+                src="/imgs/profile.jpg"
+                alt="Hamad Rafi — Front-End Developer"
+                width={260}
+                height={260}
+                priority
+                className="profile-image"
+              />
             <div className="image-border"></div>
           </div>
           <div className="hero-text">
@@ -100,7 +149,13 @@ export default function Page() {
                   <span>Bootstrap</span>
                 </div>
                 <div className="skill-item">
-                  <img style={{ maxWidth: "30px" }} src="/imgs/tailwind.logo.png" alt="Tailwind" />
+                  <Image
+                    src="/imgs/tailwind.logo.png"
+                    alt="Tailwind CSS logo"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: "contain" }}
+                  />
                   <span>Tailwind</span>
                 </div>
                 <div className="skill-item">

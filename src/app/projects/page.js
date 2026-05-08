@@ -4,6 +4,15 @@ import ClientScripts from "@/components/ClientScripts";
 import ProjectsShowcase from "@/components/ProjectsShowcase";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Projects",
+  description:
+    "Browse Hamad Rafi's portfolio of web projects — including React apps, Next.js sites, WordPress builds, and interactive JavaScript experiments.",
+  alternates: {
+    canonical: "https://hamadrafi-1.vercel.app/projects",
+  },
+};
+
 export default function ProjectsPage() {
   return (
     <>
