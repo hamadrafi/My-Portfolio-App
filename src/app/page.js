@@ -22,7 +22,7 @@ const jsonLd = {
   "@type": "Person",
   name: "Hamad Rafi",
   url: "https://hamadrafi-1.vercel.app",
-  image: "https://hamadrafi-1.vercel.app/imgs/profile.jpg",
+  image: "https://hamadrafi-1.vercel.app/imgs/profile-picture.png",
   jobTitle: "Front-End Developer",
   description:
     "Hamad Rafi is a Front-End Developer with 2+ years of experience specialising in React, Next.js, Tailwind CSS, and high-performance web interfaces.",
@@ -62,7 +62,7 @@ export default function Page() {
         <div className="hero-content">
           <div className="hero-image" data-aos="fade-up" data-aos-delay="100">
             <Image
-                src="/imgs/profile.jpg"
+                src="/imgs/profile-picture.png"
                 alt="Hamad Rafi — Front-End Developer"
                 width={260}
                 height={260}

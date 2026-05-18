@@ -45,7 +45,7 @@ export default function About() {
               </div>
               <div className="hero-image1" style={{ textAlign: "center" }}>
                 <div className="hero-image1" data-aos="fade-up" data-aos-delay="100">
-                  <img src="/imgs/profile.jpg" alt="Hamad Rafi" className="profile-image" />
+                  <img src="/imgs/profile-picture.png" alt="Hamad Rafi" className="profile-image" />
                 </div>
                 <div className="about-stats">
                   <div className="stat-item">
