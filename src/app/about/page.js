@@ -6,7 +6,7 @@ import StatCounter from "@/components/StatCounter";
 export const metadata = {
   title: "About Me",
   description:
-    "Learn about Hamad Rafi — a Front-End Developer with 2+ years of experience in React, Next.js, WordPress, and modern web design. Based in Lahore, Pakistan.",
+    "Learn about Hamad Rafi — a Full-Stack Developer with 2+ years of experience in React, Next.js, Node.js, and modern web design. Based in Lahore, Pakistan.",
   alternates: {
     canonical: "https://hamadrafi-1.vercel.app/about",
   },
@@ -36,8 +36,7 @@ export default function About() {
               <div className="about-text">
                 <h2>Hello, I'm Hamad Rafi</h2>
                 <p>
-                  I’m a dedicated <b>Front-End Developer</b> with over <b>2 years</b> of experience,
-                  specializing in creating <b>user-friendly</b> interfaces for web applications. I have a strong passion for coding and a knack for <b>problem-solving</b>. I excel with a strong understanding of HTML, CSS, JavaScript, Tailwind CSS, and Bootstrap.
+                  I’m a dedicated <b>Full-Stack Developer</b> with over <b>2 years</b> of professional experience, specializing in crafting highly interactive user interfaces and architecting scalable backend solutions. I love tackling complex backend logic and building seamless user experiences. My core stack includes <b>React</b>, <b>Next.js</b>, <b>Node.js</b>, <b>Express.js</b>, <b>Supabase</b>, <b>MongoDB</b>, and <b>Tailwind CSS</b>.
                 </p>
                 <p>
                   I have worked as a <b>WordPress Developer</b> for over two years, specialising in freelance projects where I built fully functional websites for diverse business needs. My experience includes developing complete <b>e-commerce websites</b> using Elementor and WooCommerce, ensuring seamless design integration with efficient online store functionalities. I also handled on-page and off-page <b>SEO</b> to improve website rankings and visibility. This journey has enhanced my skills in customised theme building, responsive design, SEO optimisation, and delivering user-friendly, high-converting websites tailored to client goals.

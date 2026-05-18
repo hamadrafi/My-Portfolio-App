@@ -10,7 +10,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Home",
   description:
-    "Welcome to the portfolio of Hamad Rafi — a Front-End Developer building fast, beautiful web experiences with React, Next.js, and modern CSS.",
+    "Welcome to the portfolio of Hamad Rafi — a Full-Stack Developer building fast, scalable, and beautiful web experiences from frontend to backend.",
   alternates: {
     canonical: "https://hamadrafi-1.vercel.app",
   },
@@ -23,9 +23,9 @@ const jsonLd = {
   name: "Hamad Rafi",
   url: "https://hamadrafi-1.vercel.app",
   image: "https://hamadrafi-1.vercel.app/imgs/profile-picture.png",
-  jobTitle: "Front-End Developer",
+  jobTitle: "Full-Stack Developer",
   description:
-    "Hamad Rafi is a Front-End Developer with 2+ years of experience specialising in React, Next.js, Tailwind CSS, and high-performance web interfaces.",
+    "Hamad Rafi is a Full-Stack Developer with 2+ years of experience specialising in React, Next.js, Node.js, Express.js, and building premium web applications.",
   sameAs: [
     "https://github.com/hamadrafi",
     "https://www.linkedin.com/in/hamad-rafi-33b6a6260",
@@ -77,11 +77,10 @@ export default function Page() {
               <span className="title-name">Hamad Rafi</span>
             </h1>
             <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-              Front End Developer
+              Full Stack Developer
             </p>
             <p className="hero-description" data-aos="fade-up" data-aos-delay="400">
-              I craft beautiful and functional web experiences using modern technologies.
-              Passionate about clean code, user experience, and innovative solutions.
+              I craft scalable, high-performance web applications from pixel-perfect frontends to robust backends. Passionate about clean code, optimal user experience, and innovative solutions.
             </p>
             <div className="hero-actions" data-aos="fade-up" data-aos-delay="100">
               <Link href="/projects" className="btn btn-primary">
@@ -107,21 +106,10 @@ export default function Page() {
           <div className="about-content">
             <div className="about-text" data-aos="fade-right">
               <p>
-                I’m a Front-End Developer with over 2 years of experience building responsive, user-focused web
-                interfaces.
-                Skilled in <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>Tailwind CSS</b>, and
-                <b>Bootstrap</b>, I also develop
-                modular UIs with <b>React</b> and <b>JSX</b>, using <b>Framer</b>, <b>Motion.dev</b>, and
-                <b>Hover.dev</b>
-                to deliver smooth, interactive experiences. I’m passionate about writing clean code and
-                improving my design workflow.
+                I’m a Full-Stack Developer with over 2 years of professional experience building modern, high-performance web applications. Skilled in developing responsive, accessible frontends using <b>React</b>, <b>Next.js</b>, and <b>Tailwind CSS</b>, as well as robust, scalable backends powered by <b>Node.js</b>, <b>Express.js</b>, <b>Supabase</b>, and databases like <b>MongoDB</b> and <b>SQL</b>.
               </p>
               <p>
-                Currently, I’m focused on advancing my skills in modern JavaScript frameworks and backend
-                technologies to grow as a complete full-stack developer. I enjoy exploring new tools and
-                workflows that improve productivity and creativity. Beyond coding, I love experimenting with
-                design trends, refining user interactions, and sipping a good cup of coffee while mapping out
-                my next learning milestone.
+                I love bringing together clean, beautiful designs with powerful, efficient architecture. Passionate about optimization, clean code practices, and the modern JavaScript ecosystem, I continuously seek out new tools and workflows to deliver premium digital solutions that exceed user expectations.
               </p>
               <div className="learn-section">
                 <Link href="/about" className="btn btn-outline">
@@ -133,20 +121,26 @@ export default function Page() {
             <div className="skills-preview" data-aos="fade-left">
               <div className="skills-grid">
                 <div className="skill-item">
-                  <i className="fab fa-html5" style={{ color: "#E34F26" }}></i>
-                  <span>HTML5</span>
-                </div>
-                <div className="skill-item">
-                  <i className="fab fa-css3-alt" style={{ color: "#1572B6" }}></i>
-                  <span>CSS3</span>
-                </div>
-                <div className="skill-item">
                   <i className="fab fa-js-square" style={{ color: "#F7DF1E" }}></i>
                   <span>JavaScript</span>
                 </div>
                 <div className="skill-item">
-                  <i className="fab fa-bootstrap" style={{ color: "#7952B3" }}></i>
-                  <span>Bootstrap</span>
+                  <i className="fab fa-js" style={{ color: "#3178C6" }}></i>
+                  <span>TypeScript</span>
+                </div>
+                <div className="skill-item">
+                  <i className="fab fa-react" style={{ color: "#61DAFB" }}></i>
+                  <span>React</span>
+                </div>
+                <div className="skill-item">
+                  <Image
+                    src="/next.svg"
+                    alt="Next.js logo"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: "contain", filter: "invert(1)" }}
+                  />
+                  <span>Next.js</span>
                 </div>
                 <div className="skill-item">
                   <Image
@@ -159,8 +153,24 @@ export default function Page() {
                   <span>Tailwind</span>
                 </div>
                 <div className="skill-item">
-                  <i className="fab fa-react" style={{ color: "#61DAFB" }}></i>
-                  <span>React</span>
+                  <i className="fab fa-node-js" style={{ color: "#339933" }}></i>
+                  <span>Node.js</span>
+                </div>
+                <div className="skill-item">
+                  <i className="fas fa-bolt" style={{ color: "#FFD700" }}></i>
+                  <span>Express.js</span>
+                </div>
+                <div className="skill-item">
+                  <i className="fas fa-leaf" style={{ color: "#32CD32" }}></i>
+                  <span>MongoDB</span>
+                </div>
+                <div className="skill-item">
+                  <i className="fas fa-database" style={{ color: "#3ECF8E" }}></i>
+                  <span>Supabase</span>
+                </div>
+                <div className="skill-item">
+                  <i className="fab fa-git-alt" style={{ color: "#F05032" }}></i>
+                  <span>Git & GitHub</span>
                 </div>
               </div>
             </div>
@@ -178,12 +188,20 @@ export default function Page() {
 
           <div className="projects-grid">
             <VideoProjectCard
-              title="Fitness Lab"
-              description="A sleek, responsive fitness app layout built with React and Tailwind CSS, currently a static front-end prototype showcasing a clean user interface."
-              tech={["Tailwind", "React", "Framer"]}
-              imgSrc="/imgs/FitnessApp.png"
-              videoSrc="/imgs/vids/FitnessApp.webm"
-              liveLink="https://fitness-lab.vercel.app/"
+              title="Integriti-MS"
+              description="A CMS using React, TypeScript, and Next.js to manage clients, developers, deadlines, tasks, and generate complete team performance reports."
+              tech={["React", "Typescript", "Next.js"]}
+              imgSrc="/imgs/IntegritiMs.jpg"
+              videoSrc="/imgs/vids/Integriti-MS.webm"
+              liveLink="https://integriti-ms-2j3k.vercel.app/"
+            />
+            <VideoProjectCard
+              title="Callavan"
+              description="Real-time driver tracking app using Webflow (frontend) and Supabase (backend) to connect users with nearby drivers."
+              tech={["Webflow", "CMS", "Supabase"]}
+              imgSrc="/imgs/callavan.jpg"
+              videoSrc="/imgs/vids/callavan.webm"
+              liveLink="https://www.callavan.live/"
             />
             <VideoProjectCard
               title="ElectroEnergy"
@@ -192,14 +210,6 @@ export default function Page() {
               imgSrc="/imgs/ElectroEnergy.png"
               videoSrc="/imgs/vids/ElectroEnergy.webm"
               liveLink="https://info.techknockwebsites.xyz/"
-            />
-            <VideoProjectCard
-              title="CurrencyX WebApp"
-              description="CurrencyX — A sleek, responsive currency converter web app with real-time conversion logic and smooth UI interactions."
-              tech={["Bootstrap 5", "JavaScript", "REST API"]}
-              imgSrc="/imgs/CurrencyX-WebApp.png"
-              videoSrc="/imgs/vids/Currency.webm"
-              liveLink="https://hamadrafi.github.io/CurrencyX-WebApp/"
             />
           </div>
 

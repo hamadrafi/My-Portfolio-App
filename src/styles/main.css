@@ -538,9 +538,14 @@ p {
   align-items: center;
 }
 
+.about-preview .about-content {
+  grid-template-columns: 1.25fr 0.75fr;
+}
+
 .about-text p {
   margin-bottom: 1.5rem;
-  font-size: 1.125rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
 .skills-preview h3 {
@@ -548,7 +553,7 @@ p {
   color: var(--text-primary);
 }
 
-.skills-grid {
+.skills-preview .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -1012,6 +1017,7 @@ p {
     padding: 0px 30px;
   }
 
+  .about-preview .about-content,
   .about-content,
   .about-grid {
     grid-template-columns: 1fr;
@@ -1022,6 +1028,7 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .skills-preview .skills-grid,
   .skills-grid {
     grid-template-columns: 1fr;
   }
