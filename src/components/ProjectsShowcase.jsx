@@ -24,6 +24,15 @@ const PROJECTS = [
         category: "web & api",
     },
     {
+        title: "We Know Training",
+        description: "Modern training and certification platform built with WordPress, Elementor & PHP featuring a clean, responsive design for compliance and online courses.",
+        tech: ["WordPress", "Elementor", "PHP"],
+        imgSrc: "/imgs/wkt.webp",
+        videoSrc: "/imgs/vids/wkt.webm",
+        liveLink: "https://wordpress-1608509-6323314.cloudwaysapps.com/",
+        category: "wordpress",
+    },
+    {
         title: "Protek Solutions",
         description: "Modern responsive corporate website using Next.js & Bootstrap with a clean, interactive design for eco-friendly solutions.",
         tech: ["Bootstrap","React", "Next.js"],
