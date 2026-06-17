@@ -24,8 +24,17 @@ const PROJECTS = [
         category: "web & api",
     },
     {
+        title: "Ateeq",
+        description: "A luxury archive and e-commerce platform for rare designer pieces, featuring digital passports to verify authenticity and ownership history.",
+        tech: ["Shopify", "Liquid", "Flow Automations"],
+        imgSrc: "/imgs/ateeq.png",
+        videoSrc: "/imgs/vids/ateeq.webm",
+        liveLink: "https://ateeq.sa/",
+        category: "wordpress",
+    },
+    {
         title: "Etchfy",
-        description: "A custom-engraving storefront for personalized gifts and corporate branding, featuring material-focused collections and a streamlined e-commerce interface.",
+        description: "A custom-engraving Shopify storefront for personalized gifts and corporate branding, featuring material-focused collections and a streamlined UI.",
         tech: ["Shopify", "Liquid", "Apps"],
         imgSrc: "/imgs/etchfy.png",
         videoSrc: "/imgs/vids/etchfy.webm",
