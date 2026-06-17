@@ -24,6 +24,15 @@ const PROJECTS = [
         category: "web & api",
     },
     {
+        title: "Etchfy",
+        description: "A custom-engraving storefront for personalized gifts and corporate branding, featuring material-focused collections and a streamlined e-commerce interface.",
+        tech: ["Shopify", "Liquid", "Apps"],
+        imgSrc: "/imgs/etchfy.png",
+        videoSrc: "/imgs/vids/etchfy.webm",
+        liveLink: "https://etchfy.com/",
+        category: "wordpress",
+    },
+    {
         title: "We Know Training",
         description: "Modern training and certification platform built with WordPress, Elementor & PHP featuring a clean, responsive design for compliance and online courses.",
         tech: ["WordPress", "Elementor", "PHP"],
