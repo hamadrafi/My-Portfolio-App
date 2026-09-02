@@ -50,14 +50,7 @@
   color: white;
   border-radius: 50%;
   text-decoration: none;
-  transition: all 0.3s ease;
   font-size: 1rem;
-}
-
-.project-links:hover {
-  background: var(--primary-hover);
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
 }
 
 .video-wrapper {

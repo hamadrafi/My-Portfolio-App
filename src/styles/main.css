@@ -414,7 +414,6 @@ p {
 }
 
 .profile-image:hover {
-  transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
 }
 

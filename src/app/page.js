@@ -204,12 +204,12 @@ export default function Page() {
               liveLink="https://www.callavan.live/"
             />
             <VideoProjectCard
-              title="ElectroEnergy"
-              description="ElectroEnergy — A dynamic, responsive solar solutions website offering diverse solar panels and an instant calculator for quick energy and cost estimates."
-              tech={["WordPress", "Elementor", "PHP"]}
-              imgSrc="/imgs/ElectroEnergy.png"
-              videoSrc="/imgs/vids/ElectroEnergy.webm"
-              liveLink="https://info.techknockwebsites.xyz/"
+              title="Kopilot.ID"
+              description="An NFC-powered emergency medical ID Shopify storefront for quick access to vital medical and emergency contact information."
+              tech={["Shopify", "Liquid", "Apps"]}
+              imgSrc="/imgs/kopilot.png"
+              videoSrc="/imgs/vids/kopilot.webm"
+              liveLink="https://www.kopilot.id/"
             />
           </div>
 

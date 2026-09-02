@@ -15,6 +15,15 @@ const PROJECTS = [
         category: "web & api",
     },
     {
+        title: "Kopilot.ID",
+        description: "An NFC-powered emergency medical ID Shopify storefront for quick access to vital medical and emergency contact information.",
+        tech: ["Shopify", "Liquid", "Apps"],
+        imgSrc: "/imgs/kopilot.png",
+        videoSrc: "/imgs/vids/kopilot.webm",
+        liveLink: "https://www.kopilot.id/",
+        category: "cms",
+    },
+    {
         title: "Callavan",
         description: "Real-time driver tracking app using Webflow (frontend) and Supabase (backend) to connect users with nearby drivers.",
         tech: ["Webflow","CMS", "Supabase"],
@@ -24,13 +33,22 @@ const PROJECTS = [
         category: "web & api",
     },
     {
-        title: "Ateeq",
-        description: "A luxury archive and e-commerce platform for rare designer pieces, featuring digital passports to verify authenticity and ownership history.",
-        tech: ["Shopify", "Liquid", "Flow Automations"],
-        imgSrc: "/imgs/ateeq.png",
-        videoSrc: "/imgs/vids/ateeq.webm",
-        liveLink: "https://ateeq.sa/",
-        category: "wordpress",
+        title: "Extractive",
+        description: "A wellness Shopify storefront offering plant and functional mushroom extracts crafted in Scotland to support energy, focus, and balance.",
+        tech: ["Shopify", "Liquid", "Apps"],
+        imgSrc: "/imgs/extractive.png",
+        videoSrc: "/imgs/vids/extractive.webm",
+        liveLink: "https://extractive.co.uk/",
+        category: "cms",
+    },
+    {
+        title: "Integriti Staffing",
+        description: "A recruitment website featuring WordPress-powered blogs and Sanity CMS-driven career pages for managing job opportunities.",
+        tech: ["React","Next.js", "Sanity"],
+        imgSrc: "/imgs/staffing.png",
+        videoSrc: "/imgs/vids/staffing.webm",
+        liveLink: "https://www.integritistaffing.com/",
+        category: "cms",
     },
     {
         title: "Etchfy",
@@ -39,7 +57,34 @@ const PROJECTS = [
         imgSrc: "/imgs/etchfy.png",
         videoSrc: "/imgs/vids/etchfy.webm",
         liveLink: "https://etchfy.com/",
-        category: "wordpress",
+        category: "cms",
+    },
+    {
+        title: "Moonfab",
+        description: "A Shopify storefront showcasing MoonShade setups and gear tailored for different vehicle types and outdoor adventures.",
+        tech: ["Shopify", "Liquid","Apps"],
+        imgSrc: "/imgs/moonfab.png",
+        videoSrc: "/imgs/vids/moonfab.webm",
+        liveLink: "https://moonfab.com/",
+        category: "cms",
+    },
+    {
+        title: "Eco Ballon",
+        description: "A custom balloon bouquet storefront offering personalized bouquet building and convenient Grab & Go designs for celebrations.",
+        tech: ["Shopify", "Liquid","Apps"],
+        imgSrc: "/imgs/eco-balloon.png",
+        videoSrc: "/imgs/vids/eco-ballon.webm",
+        liveLink: "https://eco-balloon-bouquets.myshopify.com/",
+        category: "cms",
+    },
+    {
+        title: "Ateeq",
+        description: "A luxury archive and e-commerce platform for rare designer pieces, featuring digital passports to verify authenticity and ownership history.",
+        tech: ["Shopify", "Liquid", "Flow Automations"],
+        imgSrc: "/imgs/ateeq.png",
+        videoSrc: "/imgs/vids/ateeq.webm",
+        liveLink: "https://ateeq.sa/",
+        category: "cms",
     },
     {
         title: "We Know Training",
@@ -48,7 +93,7 @@ const PROJECTS = [
         imgSrc: "/imgs/wkt.webp",
         videoSrc: "/imgs/vids/wkt.webm",
         liveLink: "https://wordpress-1608509-6323314.cloudwaysapps.com/",
-        category: "wordpress",
+        category: "cms",
     },
     {
         title: "Protek Solutions",
@@ -60,40 +105,31 @@ const PROJECTS = [
         category: "web",
     },
     {
-        title: "SlideEase Store",
-        description: "SlideEase Store - Built to showcase the app's slider types, responsive layouts, and Shopify theme app extension in action.",
-        tech: ["Shopify", "Liquid", "App Extension"],
-        imgSrc: "/imgs/slideease.png",
-        videoSrc: "/imgs/vids/Endless.webm",
-        liveLink: "https://slideease-dev.myshopify.com/",
-        category: "wordpress",
+        title: "Ascender Athletics",
+        description: "A modern platform empowering youth sports organizations with high-yield fundraising tools and premium custom athletic gear.",
+        tech: ["Shopify", "Liquid", "Shopify CLI"],
+        imgSrc: "/imgs/Ascender-Athletics.jpg",
+        videoSrc: "/imgs/vids/Ascender.webm",
+        liveLink: "https://ascenderathletics.com/",
+        category: "cms",
     },
     {
-        title: "Bouquet Builder Store",
-        description: "Bouquet Builder - Built to showcase the app's interactive bouquet customizer, live preview, dynamic pricing, and Shopify checkout experience.",
-        tech: ["Shopify", "Liquid", "App Extension"],
-        imgSrc: "/imgs/bouquet-builder.png",
+        title: "Endless Creations",
+        description: "A web platform for showcasing a brand’s services and experiences, delivering seamless interaction and professional engagement.",
+        tech: ["Shopify", "Liquid", "Shopify CLI"],
+        imgSrc: "/imgs/Endless-Creation.jpg",
         videoSrc: "/imgs/vids/Endless.webm",
-        liveLink: "https://bouquet-builder.myshopify.com/",
-        category: "wordpress",
+        liveLink: "https://endless-creations-spero.myshopify.com/",
+        category: "cms",
     },
     {
-        title: "FormEase Store",
-        description: "FormEase Store - Built to showcase the app's visual form builder, theme app extension, and advanced form features in action.",
-        tech: ["Shopify", "Liquid", "App Extension"],
-        imgSrc: "/imgs/formease.png",
-        videoSrc: "/imgs/vids/Endless.webm",
-        liveLink: "https://form-ease.myshopify.com/",
-        category: "wordpress",
-    },
-    {
-        title: "BookFlow Store",
-        description: "BookFlow Store - Built to showcase the app's service booking flow, real-time availability, and seamless Shopify checkout experience.",
-        tech: ["Shopify", "Liquid", "App Extension"],
-        imgSrc: "/imgs/bookflow.png",
-        videoSrc: "/imgs/vids/Endless.webm",
-        liveLink: "https://book-flow-wrmqhe1f.myshopify.com/",
-        category: "wordpress",
+        title: "Fitness Lab",
+        description: "A sleek, responsive fitness app layout built with React and Tailwind CSS, currently a static front-end prototype showcasing a clean user interface.",
+        tech: ["Tailwind", "React", "Framer Motion"],
+        imgSrc: "/imgs/FitnessApp.png",
+        videoSrc: "/imgs/vids/FitnessApp.webm",
+        liveLink: "https://fitness-lab.vercel.app/",
+        category: "web",
     },
     {
         title: "SouthLa Cafe",
@@ -102,7 +138,7 @@ const PROJECTS = [
         imgSrc: "/imgs/southla.jpg",
         videoSrc: "/imgs/vids/southla.webm",
         liveLink: "https://south-la-cafe.webflow.io/",
-        category: "wordpress",
+        category: "cms",
     },
     {
         title: "PumpRack",
@@ -111,7 +147,43 @@ const PROJECTS = [
         imgSrc: "/imgs/pumprack.jpg",
         videoSrc: "/imgs/vids/pumprack.webm",
         liveLink: "https://pumprack.com/",
-        category: "wordpress",
+        category: "cms",
+    },
+    {
+        title: "SlideEase Store",
+        description: "SlideEase Store - Built to showcase the app's slider types, responsive layouts, and Shopify theme app extension in action.",
+        tech: ["Shopify", "Liquid", "App Extension"],
+        imgSrc: "/imgs/slideease.png",
+        videoSrc: "/imgs/vids/slideease.webm",
+        liveLink: "https://slideease-dev.myshopify.com/",
+        category: "cms",
+    },
+    {
+        title: "Bouquet Builder Store",
+        description: "Bouquet Builder - Built to showcase the app's interactive bouquet customizer, live preview, dynamic pricing, and Shopify checkout experience.",
+        tech: ["Shopify", "Liquid", "App Extension"],
+        imgSrc: "/imgs/bouquet-builder.png",
+        videoSrc: "/imgs/vids/bouquet.webm",
+        liveLink: "https://bouquet-builder.myshopify.com/",
+        category: "cms",
+    },
+    {
+        title: "FormEase Store",
+        description: "FormEase Store - Built to showcase the app's visual form builder, theme app extension, and advanced form features in action.",
+        tech: ["Shopify", "Liquid", "App Extension"],
+        imgSrc: "/imgs/formease.png",
+        videoSrc: "/imgs/vids/formease.webm",
+        liveLink: "https://form-ease.myshopify.com/",
+        category: "cms",
+    },
+    {
+        title: "BookFlow Store",
+        description: "BookFlow Store - Built to showcase the app's service booking flow, real-time availability, and seamless Shopify checkout experience.",
+        tech: ["Shopify", "Liquid", "App Extension"],
+        imgSrc: "/imgs/bookflow.png",
+        videoSrc: "/imgs/vids/bookflow.webm",
+        liveLink: "https://book-flow-wrmqhe1f.myshopify.com/",
+        category: "cms",
     },
     {
         title: "Email Forge",
@@ -120,7 +192,7 @@ const PROJECTS = [
         imgSrc: "/imgs/EmailForge.jpg",
         videoSrc: "/imgs/vids/EmailForge.webm",
         liveLink: "https://theemailforge.com/",
-        category: "wordpress",
+        category: "cms",
     },
         {
         title: "Sociolyze",
@@ -138,16 +210,7 @@ const PROJECTS = [
         imgSrc: "/imgs/ExhibitsUsa.jpg",
         videoSrc: "/imgs/vids/ExhibitsUsa.webm",
         liveLink: "https://eusa-org.webflow.io/page-2",
-        category: "wordpress",
-    },
-    {
-        title: "Ascender Athletics",
-        description: "A modern platform empowering youth sports organizations with high-yield fundraising tools and premium custom athletic gear.",
-        tech: ["Shopify", "Liquid", "Shopify CLI"],
-        imgSrc: "/imgs/Ascender-Athletics.jpg",
-        videoSrc: "/imgs/vids/Ascender.webm",
-        liveLink: "https://ascenderathletics.com/",
-        category: "wordpress",
+        category: "cms",
     },
     {
         title: "RegexTool Platform",
@@ -159,31 +222,13 @@ const PROJECTS = [
         category: "web",
     },
     {
-        title: "Endless Creations",
-        description: "A web platform for showcasing a brand’s services and experiences, delivering seamless interaction and professional engagement.",
-        tech: ["Shopify", "Liquid", "Shopify CLI"],
-        imgSrc: "/imgs/Endless-Creation.jpg",
-        videoSrc: "/imgs/vids/Endless.webm",
-        liveLink: "https://endless-creations-spero.myshopify.com/",
-        category: "wordpress",
-    },
-    {
-        title: "Fitness Lab",
-        description: "A sleek, responsive fitness app layout built with React and Tailwind CSS, currently a static front-end prototype showcasing a clean user interface.",
-        tech: ["Tailwind", "React", "Framer Motion"],
-        imgSrc: "/imgs/FitnessApp.png",
-        videoSrc: "/imgs/vids/FitnessApp.webm",
-        liveLink: "https://fitness-lab.vercel.app/",
-        category: "web",
-    },
-    {
         title: "ElectroEnergy",
         description: "ElectroEnergy — A dynamic, responsive solar solutions website offering diverse solar panels and an instant calculator for quick energy and cost estimates.",
         tech: ["WordPress", "Elementor", "PHP"],
         imgSrc: "/imgs/ElectroEnergy.png",
         videoSrc: "/imgs/vids/ElectroEnergy.webm",
         liveLink: "https://electroenergy.co.uk/",
-        category: "wordpress",
+        category: "cms",
     },
     {
         title: "Amazon Clone",
@@ -201,7 +246,7 @@ const PROJECTS = [
         imgSrc: "/imgs/Thokmandee.png",
         videoSrc: "/imgs/vids/Thokmandee.webm",
         liveLink: "https://thokmandee.com/",
-        category: "wordpress",
+        category: "cms",
     },
     {
         title: "CurrencyX",
@@ -219,7 +264,7 @@ const PROJECTS = [
         imgSrc: "/imgs/Zryya.png",
         videoSrc: "/imgs/vids/Zryya.webm",
         liveLink: "https://zryya.com/",
-        category: "wordpress",
+        category: "cms",
     },
     {
         title: "Weather Dashboard",
@@ -255,7 +300,7 @@ const PROJECTS = [
         imgSrc: "/imgs/All Nations.png",
         videoSrc: "/imgs/vids/All Nations.webm",
         liveLink: "https://allnationswholesale.com/",
-        category: "wordpress",
+        category: "cms",
     },
 ];
 
@@ -296,12 +341,12 @@ export default function ProjectsShowcase() {
                         </span>
                     </button>
                     <button
-                        className={`filter-btn ${filter === "wordpress" ? "active" : ""}`}
-                        onClick={() => handleFilterChange("wordpress")}
+                        className={`filter-btn ${filter === "cms" ? "active" : ""}`}
+                        onClick={() => handleFilterChange("cms")}
                     >
                         CMS Development
                         <span className="count">
-                            {PROJECTS.filter(p => p.category.toLowerCase().split(/[&,]/).map(c => c.trim()).includes("wordpress")).length}
+                            {PROJECTS.filter(p => p.category.toLowerCase().split(/[&,]/).map(c => c.trim()).includes("cms")).length}
                         </span>
                     </button>
                     <button
