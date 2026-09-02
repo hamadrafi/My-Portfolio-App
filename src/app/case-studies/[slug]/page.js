@@ -21,6 +21,10 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const ogImage = study.project?.imgSrc
+    ? `${BASE_URL}${study.project.imgSrc}`
+    : `${BASE_URL}/imgs/preview.jpg`;
+
   return {
     title: study.title,
     description: study.description,
@@ -36,10 +40,10 @@ export async function generateMetadata({ params }) {
       tags: study.tags,
       images: [
         {
-          url: `${BASE_URL}/imgs/preview.jpg`,
+          url: ogImage,
           width: 1200,
           height: 630,
-          alt: study.title,
+          alt: study.project?.title || study.title,
         },
       ],
     },
@@ -47,7 +51,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: `${study.title} | Hamad Rafi`,
       description: study.description,
-      images: [`${BASE_URL}/imgs/preview.jpg`],
+      images: [ogImage],
     },
   };
 }

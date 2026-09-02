@@ -51,6 +51,11 @@
   border-radius: 50%;
   text-decoration: none;
   font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.project-links:hover {
+  background: var(--primary-hover);
 }
 
 .video-wrapper {

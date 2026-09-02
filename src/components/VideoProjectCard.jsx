@@ -1,6 +1,8 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import Link from "next/link";
+import { getCaseStudyByProjectTitle } from "@/data/caseStudies";
 
 export default function VideoProjectCard({
     title,
@@ -10,15 +12,23 @@ export default function VideoProjectCard({
     videoSrc,
     liveLink,
     githubLink,
+    caseStudySlug,
+    showCaseStudyLink = true,
+    showHeaderLinks = true,
     delay = "0",
     loadEager = false,
 }) {
     const videoRef = useRef(null);
     const wrapperRef = useRef(null);
-    const [isReady, setIsReady] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
 
-    // Preload video when it scrolls into view (or immediately if loadEager)
+    const resolvedSlug =
+        caseStudySlug || getCaseStudyByProjectTitle(title)?.slug || null;
+    const caseStudyHref =
+        showCaseStudyLink && resolvedSlug
+            ? `/case-studies/${resolvedSlug}`
+            : null;
+
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
@@ -39,7 +49,7 @@ export default function VideoProjectCard({
                     }
                 });
             },
-            { rootMargin: "200px" } // start loading 200px before entering viewport
+            { rootMargin: "200px" }
         );
 
         if (wrapperRef.current) observer.observe(wrapperRef.current);
@@ -48,8 +58,7 @@ export default function VideoProjectCard({
 
     const handleMouseEnter = () => {
         if (videoRef.current) {
-            videoRef.current.play().catch(() => { });
-            // Show video immediately if enough data is buffered
+            videoRef.current.play().catch(() => {});
             if (videoRef.current.readyState >= 3) {
                 setIsPlaying(true);
             }
@@ -79,13 +88,15 @@ export default function VideoProjectCard({
                     muted
                     playsInline
                     preload="none"
-                    onCanPlay={() => { if (isPlaying) setIsPlaying(true); }}
+                    onCanPlay={() => {
+                        if (isPlaying) setIsPlaying(true);
+                    }}
                     onPlaying={() => setIsPlaying(true)}
                     onPause={() => setIsPlaying(false)}
                     style={{
                         opacity: isPlaying ? 1 : 0,
                         pointerEvents: "none",
-                        willChange: "opacity"
+                        willChange: "opacity",
                     }}
                 />
                 <img
@@ -95,7 +106,7 @@ export default function VideoProjectCard({
                     loading="lazy"
                     style={{
                         opacity: isPlaying ? 0 : 1,
-                        willChange: "opacity"
+                        willChange: "opacity",
                     }}
                 />
                 {!isPlaying && (
@@ -110,18 +121,42 @@ export default function VideoProjectCard({
             <div className="project-content">
                 <div className="project-header">
                     <h3 className="project-title">{title}</h3>
-                    <div className="links">
-                        {liveLink && (
-                            <a href={liveLink} target="_blank" rel="noopener noreferrer" className="project-links">
-                                <i className="fas fa-external-link-alt"></i>
-                            </a>
-                        )}
-                        {githubLink && (
-                            <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-links">
-                                <i className="fab fa-github"></i>
-                            </a>
-                        )}
-                    </div>
+                    {showHeaderLinks && (
+                        <div className="links">
+                            {liveLink && (
+                                <a
+                                    href={liveLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="project-links"
+                                    title="View live project"
+                                >
+                                    <i className="fas fa-external-link-alt"></i>
+                                </a>
+                            )}
+                            {caseStudyHref && (
+                                <Link
+                                    href={caseStudyHref}
+                                    className="project-links"
+                                    title="Read case study"
+                                    aria-label={`Read case study for ${title}`}
+                                >
+                                    <i className="fas fa-book-open"></i>
+                                </Link>
+                            )}
+                            {githubLink && (
+                                <a
+                                    href={githubLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="project-links"
+                                    title="View on GitHub"
+                                >
+                                    <i className="fab fa-github"></i>
+                                </a>
+                            )}
+                        </div>
+                    )}
                 </div>
 
                 <p className="project-description">{description}</p>
