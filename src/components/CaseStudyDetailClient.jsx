@@ -60,8 +60,9 @@ function HighlightedText({ text }) {
     );
 }
 
-export default function CaseStudyDetailClient() {
-    const { slug } = useParams();
+export default function CaseStudyDetailClient({ slug: slugProp }) {
+    const params = useParams();
+    const slug = slugProp || params?.slug;
     const study = CASE_STUDIES.find((cs) => cs.slug === slug);
 
     if (!study) {

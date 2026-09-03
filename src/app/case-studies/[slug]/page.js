@@ -5,14 +5,13 @@ import CaseStudyDetailClient from "@/components/CaseStudyDetailClient";
 
 const BASE_URL = "https://hamadrafi-1.vercel.app";
 
-// ── Pre-render all slugs at build time ──────────────────────────────────────
 export function generateStaticParams() {
   return CASE_STUDIES.map((study) => ({ slug: study.slug }));
 }
 
-// ── Dynamic metadata per case study ────────────────────────────────────────
 export async function generateMetadata({ params }) {
-  const study = CASE_STUDIES.find((cs) => cs.slug === params.slug);
+  const { slug } = await params;
+  const study = CASE_STUDIES.find((cs) => cs.slug === slug);
 
   if (!study) {
     return {
@@ -56,7 +55,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// ── Page render ─────────────────────────────────────────────────────────────
-export default function CaseStudyPage() {
-  return <CaseStudyDetailClient />;
+export default async function CaseStudyPage({ params }) {
+  const { slug } = await params;
+  return <CaseStudyDetailClient slug={slug} />;
 }
