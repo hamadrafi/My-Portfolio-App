@@ -6,7 +6,7 @@ import StatCounter from "@/components/StatCounter";
 export const metadata = {
   title: "About Me",
   description:
-    "Learn about Hamad Rafi — a Full-Stack Developer with 2+ years of experience in React, Next.js, Node.js, and modern web design. Based in Lahore, Pakistan.",
+    "Learn about Hamad Rafi — Associate Software Engineer at Integriti, building full-stack apps with React, Next.js, Node.js, Shopify, WordPress, and Webflow. Based in Lahore, Pakistan.",
   alternates: {
     canonical: "https://hamadrafi-1.vercel.app/about",
   },
@@ -34,12 +34,23 @@ export default function About() {
           <div className="about-grid">
             <div className="about-content" data-aos="fade-right">
               <div className="about-text">
-                <h2>Hello, I'm Hamad Rafi</h2>
+                <h2>Hello, I&apos;m Hamad Rafi</h2>
                 <p>
-                  I’m a dedicated <b>Full-Stack Developer</b> with over <b>2 years</b> of professional experience, specializing in crafting highly interactive user interfaces and architecting scalable backend solutions. I love tackling complex backend logic and building seamless user experiences. My core stack includes <b>React</b>, <b>Next.js</b>, <b>Node.js</b>, <b>Express.js</b>, <b>Supabase</b>, <b>MongoDB</b>, and <b>Tailwind CSS</b>.
+                  I&apos;m an <b>Associate Software Engineer</b> at <b>Integriti</b> in Lahore,
+                  building and maintaining full-stack web applications with{" "}
+                  <b>React</b>, <b>Next.js</b>, <b>Nest.js</b>, and <b>Node.js</b> — covering
+                  frontend UI, backend logic, and third-party integrations. I also develop
+                  e-commerce and business websites on <b>Shopify</b>, <b>WordPress</b>, and{" "}
+                  <b>Webflow</b>, with a focus on responsive design, performance, and
+                  deployment, plus custom Shopify apps that extend store functionality and
+                  automate workflows.
                 </p>
                 <p>
-                  I have worked as a <b>WordPress Developer</b> for over two years, specialising in freelance projects where I built fully functional websites for diverse business needs. My experience includes developing complete <b>e-commerce websites</b> using Elementor and WooCommerce, ensuring seamless design integration with efficient online store functionalities. I also handled on-page and off-page <b>SEO</b> to improve website rankings and visibility. This journey has enhanced my skills in customised theme building, responsive design, SEO optimisation, and delivering user-friendly, high-converting websites tailored to client goals.
+                  Across my work I use <b>JavaScript (ES6+)</b>, <b>PHP</b>, <b>Python</b>, and{" "}
+                  <b>C++</b>,                   with UI libraries like <b>Tailwind CSS</b>, <b>Bootstrap</b>, and{" "}
+                  <b>React Bits</b>, and data layers including <b>PostgreSQL</b>,{" "}
+                  <b>MongoDB</b>, and <b>Supabase</b>. I care about clean architecture and
+                  shippable products that teams can rely on.
                 </p>
               </div>
               <div className="hero-image1" style={{ textAlign: "center" }}>
@@ -55,13 +66,13 @@ export default function About() {
                   </div>
                   <div className="stat-item">
                     <div className="stat-number">
-                      <StatCounter end="20" suffix="+" />
+                      <StatCounter end="30" suffix="+" />
                     </div>
                     <div className="stat-label">Projects Completed</div>
                   </div>
                   <div className="stat-item">
                     <div className="stat-number">
-                      <StatCounter end="5" suffix="+" />
+                      <StatCounter end="10" suffix="+" />
                     </div>
                     <div className="stat-label">Happy Clients</div>
                   </div>
@@ -80,7 +91,6 @@ export default function About() {
             <p className="section-subtitle">Tools and technologies I work with</p>
           </div>
           <div className="skills-grid">
-            {/* Frontend */}
             <div className="skill-category" data-aos="fade-up" data-aos-delay="100">
               <h3 className="category-title">
                 <i className="fas fa-laptop-code"></i>
@@ -102,30 +112,50 @@ export default function About() {
                   </div>
                 </div>
                 <div className="skill-item">
-                  <i className="fab fa-js-square" style={{ color: "#F7DF1E" }}></i>
-                  <span>JavaScript (ES6+)</span>
+                  <i className="fab fa-js" style={{ color: "#F7DF1E" }}></i>
+                  <span>JavaScript</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "90%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <i className="fab fa-react" style={{ color: "#61DAFB" }}></i>
+                  <span>React.js</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "90%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <img className="skill-logo-dark" src="/imgs/skills/nextdotjs.svg" alt="Next.js" />
+                  <span>Next.js</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "88%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <img src="/imgs/tailwind.logo.png" alt="Tailwind CSS" />
+                  <span>Tailwind CSS</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "88%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <i className="fab fa-bootstrap" style={{ color: "#7952B3" }}></i>
+                  <span>Bootstrap</span>
                   <div className="skill-level">
                     <div className="skill-bar" style={{ width: "85%" }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
-                  <img style={{ maxWidth: "30px" }} src="/imgs/tailwind.logo.png" alt="Tailwind" />
-                  <span>Tailwind</span>
+                  <img src="/imgs/skills/reactbits.svg" alt="React Bits" />
+                  <span>React Bits</span>
                   <div className="skill-level">
                     <div className="skill-bar" style={{ width: "80%" }}></div>
-                  </div>
-                </div>
-                <div className="skill-item">
-                  <i className="fab fa-react" style={{ color: "#61DAFB" }}></i>
-                  <span>React</span>
-                  <div className="skill-level">
-                    <div className="skill-bar" style={{ width: "70%" }}></div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Backend */}
             <div className="skill-category" data-aos="fade-up" data-aos-delay="200">
               <h3 className="category-title">
                 <i className="fas fa-server"></i>
@@ -136,88 +166,121 @@ export default function About() {
                   <i className="fab fa-node-js" style={{ color: "#339933" }}></i>
                   <span>Node.js</span>
                   <div className="skill-level">
-                    <div className="skill-bar" style={{ width: "70%" }}></div>
-                  </div>
-                </div>
-                <div className="skill-item">
-                  <i className="fab fa-python" style={{
-                    background: "linear-gradient(180deg, #3776AB 45%, #FFD43B 55%)",
-                    backgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
-                  }}></i>
-                  <span>Python</span>
-                  <div className="skill-level">
                     <div className="skill-bar" style={{ width: "85%" }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
-                  <i className="fas fa-bolt" style={{ color: "#FFD700" }}></i>
-                  <span>Express.js</span>
-                  <div className="skill-level">
-                    <div className="skill-bar" style={{ width: "90%" }}></div>
-                  </div>
-                </div>
-                <div className="skill-item">
-                  <i className="fas fa-fire" style={{ 
-                    background: "linear-gradient(45deg, #FF4500, #FFA500, #FFFF00)", 
-                    backgroundClip: "text", 
-                    WebkitTextFillColor: "transparent" 
-                  }}></i>
-                  <span>FastAPI</span>
+                  <img src="/imgs/skills/nestjs.svg" alt="Nest.js" />
+                  <span>Nest.js</span>
                   <div className="skill-level">
                     <div className="skill-bar" style={{ width: "80%" }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
-                  <i className="fas fa-gem" style={{ color: "#E0115F" }}></i>
-                  <span>GraphQL</span>
+                  <img src="/imgs/skills/postgresql.svg" alt="PostgreSQL" />
+                  <span>PostgreSQL</span>
                   <div className="skill-level">
-                    <div className="skill-bar" style={{ width: "75%" }}></div>
+                    <div className="skill-bar" style={{ width: "82%" }}></div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Database */}
-            <div className="skill-category" data-aos="fade-up" data-aos-delay="300">
-              <h3 className="category-title">
-                <i className="fas fa-database"></i>
-                Database & Cloud
-              </h3>
-              <div className="skills-list">
                 <div className="skill-item">
-                  <i className="fas fa-leaf" style={{ color: "#32CD32" }}></i>
+                  <img src="/imgs/skills/mongodb.svg" alt="MongoDB" />
                   <span>MongoDB</span>
                   <div className="skill-level">
                     <div className="skill-bar" style={{ width: "85%" }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
-                  <i className="fas fa-database" style={{ color: "#0074D9" }}></i>
-                  <span>SQL</span>
+                  <img src="/imgs/skills/supabase.svg" alt="Supabase" />
+                  <span>Supabase</span>
                   <div className="skill-level">
-                    <div className="skill-bar" style={{ width: "90%" }}></div>
+                    <div className="skill-bar" style={{ width: "80%" }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
-                  <i className="fab fa-git-alt" style={{ color: "#F05032" }}></i>
-                  <span>Git</span>
+                  <i className="fab fa-php" style={{ color: "#777BB4" }}></i>
+                  <span>PHP</span>
                   <div className="skill-level">
-                    <div className="skill-bar" style={{ width: "90%" }}></div>
+                    <div className="skill-bar" style={{ width: "80%" }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
-                  <i className="fab fa-github"></i>
-                  <span>Github</span>
+                  <i className="fab fa-python" style={{ color: "#3776AB" }}></i>
+                  <span>Python</span>
                   <div className="skill-level">
                     <div className="skill-bar" style={{ width: "75%" }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
-                  <i className="fab fa-docker" style={{ color: "#0A2F8F" }}></i>
-                  <span>Docker</span>
+                  <img src="/imgs/skills/cplusplus.svg" alt="C++" />
+                  <span>C++</span>
                   <div className="skill-level">
                     <div className="skill-bar" style={{ width: "70%" }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="skill-category" data-aos="fade-up" data-aos-delay="300">
+              <h3 className="category-title">
+                <i className="fas fa-tools"></i>
+                Platforms
+              </h3>
+              <div className="skills-list">
+                <div className="skill-item">
+                  <i className="fab fa-shopify" style={{ color: "#96BF48" }}></i>
+                  <span>Shopify</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "88%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <i className="fab fa-wordpress" style={{ color: "#21759B" }}></i>
+                  <span>WordPress</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "90%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <img src="/imgs/skills/webflow.svg" alt="Webflow" />
+                  <span>Webflow</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "80%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <i className="fab fa-github"></i>
+                  <span>GitHub</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "90%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <img className="skill-logo-dark" src="/imgs/skills/vercel.svg" alt="Vercel" />
+                  <span>Vercel</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "85%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <img src="/imgs/skills/render.svg" alt="Render" />
+                  <span>Render</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "80%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <img className="skill-logo-dark" src="/imgs/skills/railway.svg" alt="Railway" />
+                  <span>Railway</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "78%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <i className="fab fa-figma" style={{ color: "#F24E1E" }}></i>
+                  <span>Figma</span>
+                  <div className="skill-level">
+                    <div className="skill-bar" style={{ width: "82%" }}></div>
                   </div>
                 </div>
               </div>
@@ -237,6 +300,35 @@ export default function About() {
             <div className="timeline-item" data-aos="fade-up" data-aos-delay="100">
               <div className="timeline-marker"></div>
               <div className="timeline-content">
+                <h3 className="timeline-title">Associate Software Engineer</h3>
+                <p className="timeline-company">Integriti, Lahore, Pakistan</p>
+                <p className="timeline-period">Jan 2026 – Present</p>
+                <p className="timeline-description">
+                  Building and maintaining full-stack web applications with Next.js, React,
+                  Nest.js, and Node.js — including frontend UI, backend logic, and third-party
+                  integrations. Developing custom Shopify apps and integrations to extend store
+                  functionality and automate e-commerce workflows. Shipping e-commerce and
+                  business websites on Shopify, WordPress, and Webflow with a focus on
+                  responsive design, performance optimization, and deployment.
+                </p>
+              </div>
+            </div>
+
+            <div className="timeline-item" data-aos="fade-up" data-aos-delay="150">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <h3 className="timeline-title">WordPress Developer Internship</h3>
+                <p className="timeline-company">Thokmandee, Lahore</p>
+                <p className="timeline-period">Sep 2025 - Dec 2025</p>
+                <p className="timeline-description">
+                  Built custom WordPress websites and plugins from scratch without templates while mastering Figma and efficient layer management. Developed blogs and fully functional sites solving real-world problems. Enhanced user experience with clean, responsive designs. Strengthened PHP and WordPress development skills.
+                </p>
+              </div>
+            </div>
+
+            <div className="timeline-item" data-aos="fade-up" data-aos-delay="200">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
                 <h3 className="timeline-title">Frontend Developer Internship</h3>
                 <p className="timeline-company">Elevvo Pathways, Egypt</p>
                 <p className="timeline-period">June 2025 - August 2025</p>
@@ -245,19 +337,8 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="timeline-item" data-aos="fade-up" data-aos-delay="200">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <h3 className="timeline-title">WordPress Developer Internship</h3>
-                <p className="timeline-company">Thokmandee, Lahore</p>
-                <p className="timeline-period">Sep 2025 - Nov 2025</p>
-                <p className="timeline-description">
-                  Built custom WordPress websites and plugins from scratch without templates while mastering Figma and efficient layer management. Developed blogs and fully functional sites solving real-world problems. Enhanced user experience with clean, responsive designs. Strengthened PHP and WordPress development skills.
-                </p>
-              </div>
-            </div>
 
-            <div className="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <div className="timeline-item" data-aos="fade-up" data-aos-delay="250">
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3 className="timeline-title">SEO Link Builder Internship</h3>
@@ -269,7 +350,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <div className="timeline-item" data-aos="fade-up" data-aos-delay="300">
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3 className="timeline-title">Bachelor of Science in Software Engineering (BSSE)</h3>

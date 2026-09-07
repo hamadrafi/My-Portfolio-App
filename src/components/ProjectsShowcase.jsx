@@ -8,7 +8,7 @@ const PROJECTS = [
     {
         title: "VisionFit AI",
         description: "AI-powered fashion SaaS with style analysis, personalized recommendations, virtual try-on, and a brand portal for Try On integration.",
-        tech: ["Next.js", "MongoDB", "MediaPipe"],
+        tech: ["React", "Express", "MongoDB"],
         imgSrc: "/imgs/visionfitai.png",
         videoSrc: "/imgs/vids/visionfitai.webm",
         liveLink: "https://fyp-visionfitai.vercel.app/",

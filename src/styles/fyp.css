@@ -430,8 +430,22 @@
 
 .fyp-stack-title {
   font-size: 1rem;
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
   color: var(--text-primary);
+}
+
+.fyp-stack-groups {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.fyp-stack-group-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-color);
 }
 
 .fyp-credit {

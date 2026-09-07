@@ -25,9 +25,9 @@ const jsonLd = {
   name: "Hamad Rafi",
   url: "https://hamadrafi-1.vercel.app",
   image: "https://hamadrafi-1.vercel.app/imgs/profile-picture.png",
-  jobTitle: "Full-Stack Developer",
+  jobTitle: "Associate Software Engineer",
   description:
-    "Hamad Rafi is a Full-Stack Developer with 2+ years of experience specialising in React, Next.js, Node.js, Express.js, and building premium web applications.",
+    "Hamad Rafi is an Associate Software Engineer at Integriti specialising in React, Next.js, Node.js, Shopify, WordPress, and Webflow.",
   sameAs: [
     "https://github.com/hamadrafi",
     "https://www.linkedin.com/in/hamad-rafi-33b6a6260",
@@ -36,11 +36,14 @@ const jsonLd = {
     "React",
     "Next.js",
     "JavaScript",
+    "Node.js",
+    "Shopify",
+    "WordPress",
+    "Webflow",
+    "MongoDB",
+    "PostgreSQL",
+    "Supabase",
     "Tailwind CSS",
-    "CSS3",
-    "HTML5",
-    "Framer Motion",
-    "Web Performance",
   ],
 };
 
@@ -108,10 +111,22 @@ export default function Page() {
           <div className="about-content">
             <div className="about-text" data-aos="fade-right">
               <p>
-                I’m a Full-Stack Developer with over 2 years of professional experience building modern, high-performance web applications. Skilled in developing responsive, accessible frontends using <b>React</b>, <b>Next.js</b>, and <b>Tailwind CSS</b>, as well as robust, scalable backends powered by <b>Node.js</b>, <b>Express.js</b>, <b>Supabase</b>, and databases like <b>MongoDB</b> and <b>SQL</b>.
+                I&apos;m an <b>Associate Software Engineer</b> at <b>Integriti</b>, building
+                full-stack web apps with <b>React</b>, <b>Next.js</b>, and <b>Node.js</b>, plus
+                e-commerce and business sites on <b>Shopify</b>, <b>WordPress</b>, and{" "}
+                <b>Webflow</b>. I work across frontend UI, backend logic, third-party
+                integrations, and custom Shopify apps that automate store workflows.
               </p>
               <p>
-                I love bringing together clean, beautiful designs with powerful, efficient architecture. Passionate about optimization, clean code practices, and the modern JavaScript ecosystem, I continuously seek out new tools and workflows to deliver premium digital solutions that exceed user expectations.
+                My toolkit spans <b>JavaScript</b>, <b>PHP</b>, and <b>Python</b>, with{" "}
+                <b>Tailwind CSS</b> / <b>Bootstrap</b> on the UI side and{" "}
+                <b>PostgreSQL</b>, <b>MongoDB</b>, and <b>Supabase</b> for data — always aiming
+                for responsive design, performance, and clean deployments.
+              </p>
+              <p>
+                Over <b>30+ projects delivered</b>, I&apos;ve shipped storefronts, CMS builds,
+                and full-stack products end to end — from polished interfaces to reliable
+                backends and integrations that hold up in production.
               </p>
               <div className="learn-section">
                 <Link href="/about" className="btn btn-outline">
@@ -127,22 +142,23 @@ export default function Page() {
                   <span>JavaScript</span>
                 </div>
                 <div className="skill-item">
-                  <i className="fab fa-js" style={{ color: "#3178C6" }}></i>
-                  <span>TypeScript</span>
-                </div>
-                <div className="skill-item">
                   <i className="fab fa-react" style={{ color: "#61DAFB" }}></i>
                   <span>React</span>
                 </div>
                 <div className="skill-item">
                   <Image
-                    src="/next.svg"
+                    src="/imgs/skills/nextdotjs.svg"
                     alt="Next.js logo"
                     width={30}
                     height={30}
-                    style={{ objectFit: "contain", filter: "invert(1)" }}
+                    className="skill-logo-dark"
+                    style={{ objectFit: "contain" }}
                   />
                   <span>Next.js</span>
+                </div>
+                <div className="skill-item">
+                  <i className="fab fa-node-js" style={{ color: "#339933" }}></i>
+                  <span>Node.js</span>
                 </div>
                 <div className="skill-item">
                   <Image
@@ -155,24 +171,56 @@ export default function Page() {
                   <span>Tailwind</span>
                 </div>
                 <div className="skill-item">
-                  <i className="fab fa-node-js" style={{ color: "#339933" }}></i>
-                  <span>Node.js</span>
+                  <i className="fab fa-shopify" style={{ color: "#96BF48" }}></i>
+                  <span>Shopify</span>
                 </div>
                 <div className="skill-item">
-                  <i className="fas fa-bolt" style={{ color: "#FFD700" }}></i>
-                  <span>Express.js</span>
+                  <i className="fab fa-wordpress" style={{ color: "#21759B" }}></i>
+                  <span>WordPress</span>
                 </div>
                 <div className="skill-item">
-                  <i className="fas fa-leaf" style={{ color: "#32CD32" }}></i>
+                  <Image
+                    src="/imgs/skills/webflow.svg"
+                    alt="Webflow logo"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: "contain" }}
+                  />
+                  <span>Webflow</span>
+                </div>
+                <div className="skill-item">
+                  <Image
+                    src="/imgs/skills/postgresql.svg"
+                    alt="PostgreSQL logo"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: "contain" }}
+                  />
+                  <span>PostgreSQL</span>
+                </div>
+                <div className="skill-item">
+                  <Image
+                    src="/imgs/skills/mongodb.svg"
+                    alt="MongoDB logo"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: "contain" }}
+                  />
                   <span>MongoDB</span>
                 </div>
                 <div className="skill-item">
-                  <i className="fas fa-database" style={{ color: "#3ECF8E" }}></i>
+                  <Image
+                    src="/imgs/skills/supabase.svg"
+                    alt="Supabase logo"
+                    width={30}
+                    height={30}
+                    style={{ objectFit: "contain" }}
+                  />
                   <span>Supabase</span>
                 </div>
                 <div className="skill-item">
-                  <i className="fab fa-git-alt" style={{ color: "#F05032" }}></i>
-                  <span>Git & GitHub</span>
+                  <i className="fab fa-github"></i>
+                  <span>GitHub</span>
                 </div>
               </div>
             </div>

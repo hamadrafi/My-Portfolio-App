@@ -10,7 +10,7 @@ const LIVE_URL = "https://fyp-visionfitai.vercel.app/";
 const FOR_USERS = [
   "AI style analysis for face shape, body type, hair, and skin tone",
   "Personalized outfit, footwear, accessories, and hairstyle suggestions",
-  "Virtual try-on with webcam and pose detection",
+  "Virtual try-on with webcam and canvas overlays",
   "Outfit generation based on what actually suits the user",
 ];
 
@@ -21,16 +21,53 @@ const FOR_BRANDS = [
   "Try On as a service for fashion storefronts",
 ];
 
-const STACK = [
-  "React.js",
-  "Next.js",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Google Gemini",
-  "MediaPipe",
-  "TensorFlow.js",
-  "Vercel",
+const STACK_GROUPS = [
+  {
+    label: "Frontend",
+    items: [
+      "React 18",
+      "React Router 6",
+      "Axios",
+      "Formik + Yup",
+      "TailwindCSS 3",
+      "DaisyUI",
+      "NextUI",
+      "Framer Motion",
+      "Swiper",
+      "Lucide React",
+      "React Webcam",
+    ],
+  },
+  {
+    label: "Backend",
+    items: [
+      "Node.js + Express 4",
+      "MongoDB + Mongoose 8",
+      "JWT + bcrypt",
+      "Joi",
+      "Multer",
+      "Sharp",
+    ],
+  },
+  {
+    label: "AI",
+    items: ["Google Gemini", "OpenAI GPT-4 Vision"],
+  },
+  {
+    label: "AR Module",
+    items: [
+      "React + TypeScript",
+      "Webcam + Canvas API",
+    ],
+  },
+  {
+    label: "Other",
+    items: [
+      "Polar.sh",
+      "Unsplash / Google Images",
+      "Custom Node test suite",
+    ],
+  },
 ];
 
 export default function FypPage() {
@@ -73,7 +110,7 @@ export default function FypPage() {
               <VideoProjectCard
                 title="VisionFit AI"
                 description="Style analysis, personalized recommendations, virtual try-on, and a brand portal for Try On integration."
-                tech={["Next.js", "MongoDB", "MediaPipe"]}
+                tech={["React", "Express", "MongoDB"]}
                 imgSrc="/imgs/visionfitai.png"
                 videoSrc="/imgs/vids/visionfitai.webm"
                 liveLink={LIVE_URL}
@@ -107,17 +144,24 @@ export default function FypPage() {
               <h3>Virtual Try-On as a Service.</h3>
               <p>
                 VisionFit AI is an AI fashion SaaS with style analysis, recommendations, and
-                real-time try-on. Brands can integrate it into their stores using MediaPipe,
-                TensorFlow.js, and Google Gemini.
+                real-time try-on. Built with a React frontend, Express + MongoDB backend,
+                Gemini / OpenAI for style AI, and a separate TypeScript AR try-on module.
               </p>
             </div>
           </div>
 
           <div className="fyp-stack-block" data-aos="fade-up">
             <h3 className="fyp-stack-title">Tech stack</h3>
-            <div className="fyp-stack">
-              {STACK.map((item) => (
-                <span key={item}>{item}</span>
+            <div className="fyp-stack-groups">
+              {STACK_GROUPS.map((group) => (
+                <div key={group.label} className="fyp-stack-group">
+                  <h4 className="fyp-stack-group-label">{group.label}</h4>
+                  <div className="fyp-stack">
+                    {group.items.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
