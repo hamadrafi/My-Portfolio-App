@@ -9,6 +9,7 @@ export default function sitemap() {
     { url: `${BASE_URL}/about`, priority: 0.8, changeFrequency: "monthly" },
     { url: `${BASE_URL}/projects`, priority: 0.9, changeFrequency: "weekly" },
     { url: `${BASE_URL}/case-studies`, priority: 0.8, changeFrequency: "weekly" },
+    { url: `${BASE_URL}/fyp`, priority: 0.8, changeFrequency: "monthly" },
     { url: `${BASE_URL}/contact`, priority: 0.7, changeFrequency: "yearly" },
   ].map((route) => ({
     ...route,

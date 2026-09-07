@@ -15,6 +15,7 @@ export default function VideoProjectCard({
     caseStudySlug,
     showCaseStudyLink = true,
     showHeaderLinks = true,
+    isFyp = false,
     delay = "0",
     loadEager = false,
 }) {
@@ -116,6 +117,7 @@ export default function VideoProjectCard({
                         </svg>
                     </div>
                 )}
+                {isFyp && <span className="project-fyp-badge">FYP</span>}
             </div>
 
             <div className="project-content">

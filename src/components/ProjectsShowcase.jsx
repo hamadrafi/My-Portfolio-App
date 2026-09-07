@@ -6,6 +6,16 @@ import AOS from "aos";
 
 const PROJECTS = [
     {
+        title: "VisionFit AI",
+        description: "AI-powered fashion SaaS with style analysis, personalized recommendations, virtual try-on, and a brand portal for Try On integration.",
+        tech: ["Next.js", "MongoDB", "MediaPipe"],
+        imgSrc: "/imgs/visionfitai.png",
+        videoSrc: "/imgs/vids/visionfitai.webm",
+        liveLink: "https://fyp-visionfitai.vercel.app/",
+        category: "web & api",
+        isFyp: true,
+    },
+    {
         title: "Integriti-MS",
         description: "A CMS using React, TypeScript, and Next.js to manage clients, developers, deadlines, tasks, and generate complete team performance reports.",
         tech: ["React","Typescript", "Next.js"],

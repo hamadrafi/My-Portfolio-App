@@ -62,10 +62,17 @@ export default function Navbar() {
                     </Link>
                     <Link
                         href="/case-studies"
-                        className={`nav-link ${pathname === "/case-studies" ? "active" : ""}`}
+                        className={`nav-link ${pathname === "/case-studies" || pathname?.startsWith("/case-studies/") ? "active" : ""}`}
                         onClick={closeMenu}
                     >
                         Case Studies
+                    </Link>
+                    <Link
+                        href="/fyp"
+                        className={`nav-link ${pathname === "/fyp" ? "active" : ""}`}
+                        onClick={closeMenu}
+                    >
+                        FYP
                     </Link>
                     <Link
                         href="/contact"

@@ -1,10 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VideoProjectCard from "@/components/VideoProjectCard";
+import HomeFypPreview from "@/components/HomeFypPreview";
 import ClientScripts from "@/components/ClientScripts";
 import Particles from "@/components/Particles";
 import Link from "next/link";
 import Image from "next/image";
+import { CASE_STUDIES } from "@/data/caseStudies";
 
 // ── Page-level metadata (inherits template from layout: "%s | Hamad Rafi") ──
 export const metadata = {
@@ -218,6 +220,56 @@ export default function Page() {
               View All Projects
               <i className="fas fa-arrow-right"></i>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FYP Preview — media stage linking to /fyp */}
+      <HomeFypPreview />
+
+      {/* Case Studies Preview — editorial story index */}
+      <section className="home-preview case-studies-preview">
+        <div className="container">
+          <div className="home-cs-layout">
+            <aside className="home-cs-aside">
+              <span className="home-preview-eyebrow">Process</span>
+              <h2 className="section-title">Case Studies</h2>
+              <p className="home-preview-lead">
+                Not just what shipped — the constraint, the conflict, and the fix that made it hold.
+              </p>
+              <div className="learn-section">
+                <Link href="/case-studies" className="btn btn-outline">
+                  View Case Studies
+                  <i className="fas fa-arrow-right"></i>
+                </Link>
+              </div>
+            </aside>
+
+            <div className="home-cs-index" data-aos="fade-up">
+              {CASE_STUDIES.slice(0, 3).map((study, index) => (
+                <Link
+                  key={study.slug}
+                  href={`/case-studies/${study.slug}`}
+                  className="home-cs-row"
+                >
+                  <span className="home-cs-num">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className="home-cs-main">
+                    <h3>{study.title}</h3>
+                    <p>{study.description}</p>
+                    <ul className="home-cs-tags">
+                      {study.tags.slice(0, 3).map((tag) => (
+                        <li key={tag}>{tag}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <span className="home-cs-go" aria-hidden="true">
+                    <i className="fas fa-arrow-right"></i>
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
