@@ -19,6 +19,7 @@ export default function VideoProjectCard({
     isFyp = false,
     delay = "0",
     loadEager = false,
+    disableAos = false,
 }) {
     const videoRef = useRef(null);
     const wrapperRef = useRef(null);
@@ -52,7 +53,10 @@ export default function VideoProjectCard({
     };
 
     return (
-        <div className="project-card" data-aos="fade-up" data-aos-delay={delay}>
+        <div
+            className="project-card"
+            {...(!disableAos ? { "data-aos": "fade-up", "data-aos-delay": delay } : {})}
+        >
             <div
                 ref={wrapperRef}
                 className="project-image video-wrapper"
@@ -75,7 +79,6 @@ export default function VideoProjectCard({
                     style={{
                         opacity: isPlaying ? 1 : 0,
                         pointerEvents: "none",
-                        willChange: "opacity",
                     }}
                 />
                 <Image
@@ -83,12 +86,11 @@ export default function VideoProjectCard({
                     alt={title}
                     fill
                     priority={loadEager}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                    sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) 50vw, 380px"
                     className="poster-img"
                     style={{
                         objectFit: "cover",
                         opacity: isPlaying ? 0 : 1,
-                        willChange: "opacity",
                     }}
                 />
                 {!isPlaying && (

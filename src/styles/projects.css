@@ -12,10 +12,6 @@
 
 .project-card {
   border: 1px solid var(--text-secondary);
-  will-change: transform, opacity;
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .projects-cta {
@@ -90,8 +86,6 @@
   display: block;
   transition: opacity 0.25s ease;
   z-index: 1;
-  will-change: opacity;
-  transform: translateZ(0);
 }
 
 .project-video {
@@ -105,8 +99,6 @@
   transition: opacity 0.25s ease;
   z-index: 2;
   background: transparent !important;
-  will-change: opacity;
-  transform: translateZ(0);
 }
 
 .play-icon-overlay {

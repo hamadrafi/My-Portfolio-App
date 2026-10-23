@@ -421,14 +421,15 @@ export default function ProjectsShowcase() {
 
                 <div className="projects-grid" id="projects-grid">
                     {filteredProjects.map((project, index) => {
-                        const isEager = index < 3;
-                        const aosDelay = isEager ? String((index + 1) * 100) : "0";
+                        const isFirst = index === 0;
+                        const aosDelay = isFirst ? "0" : (index < 3 ? String((index + 1) * 100) : "0");
                         return (
                             <VideoProjectCard
                                 key={project.title}
                                 {...project}
                                 delay={aosDelay}
-                                loadEager={isEager}
+                                loadEager={isFirst}
+                                disableAos={isFirst}
                             />
                         );
                     })}

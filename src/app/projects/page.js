@@ -1,10 +1,8 @@
-import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProjectsShowcase from "@/components/ProjectsShowcase";
+import ClientScripts from "@/components/ClientScripts";
 import Link from "next/link";
-
-const ClientScripts = dynamic(() => import("@/components/ClientScripts"));
 
 export const metadata = {
   title: "Projects",
@@ -25,7 +23,7 @@ export default function ProjectsPage() {
         {/* Page Header */}
         <section className="page-header">
           <div className="container">
-            <div className="header-content" data-aos="fade-up">
+            <div className="header-content">
               <h1 className="page-title">My Projects</h1>
               <p className="page-subtitle">A showcase of my recent work and personal projects</p>
             </div>
