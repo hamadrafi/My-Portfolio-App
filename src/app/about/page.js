@@ -4,9 +4,9 @@ import ClientScripts from "@/components/ClientScripts";
 import StatCounter from "@/components/StatCounter";
 
 export const metadata = {
-  title: "About Me",
+  title: "About Hamad Rafi | Full Stack Software Engineer & Store Specialist",
   description:
-    "Learn about Hamad Rafi — Associate Software Engineer at Integriti, building full-stack apps with React, Next.js, Node.js, Shopify, WordPress, and Webflow. Based in Lahore, Pakistan.",
+    "Meet Hamad Rafi — Full Stack Software Engineer at Integriti. Expert in Next.js, React, Node.js, and high-performance Shopify, WordPress, and Webflow store architecture.",
   alternates: {
     canonical: "https://hamadrafi-1.vercel.app/about",
   },

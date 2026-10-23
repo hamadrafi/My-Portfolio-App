@@ -5,9 +5,9 @@ import ClientScripts from "@/components/ClientScripts";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Projects",
+  title: "Projects | Full Stack Web Apps, Shopify, WordPress & Webflow Stores",
   description:
-    "Browse Hamad Rafi's portfolio of web projects — including React apps, Next.js sites, WordPress builds, and interactive JavaScript experiments.",
+    "Explore 30+ production projects engineered by Hamad Rafi — including full-stack Next.js and React web apps, custom Shopify stores, WordPress/WooCommerce builds, and Webflow sites.",
   alternates: {
     canonical: "https://hamadrafi-1.vercel.app/projects",
   },

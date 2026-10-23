@@ -1,0 +1,45 @@
+# Hamad Rafi — Full Stack Software Engineer & Store Specialist
+
+> Elite Software Engineer specializing in scalable full-stack web applications (React, Next.js, Node.js, FastAPI) and custom e-commerce store architecture (Shopify, WordPress/WooCommerce, Webflow).
+
+## Profile & Contact
+- **Name**: Hamad Rafi
+- **Role**: Full Stack Software Engineer & E-Commerce Specialist
+- **Company**: Integriti (Associate Software Engineer)
+- **Location**: Lahore, Pakistan (Available for Worldwide Remote Contracts & Full-Time Roles)
+- **Portfolio**: https://hamadrafi-1.vercel.app
+- **Email**: hamadrafi11@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/hamad-rafi-33b6a6260
+- **GitHub**: https://github.com/hamadrafi
+
+## Core Specializations
+
+### 1. Full-Stack Application Development
+- **Frontend**: Next.js (App Router, Server Components, SSR/SSG), React.js, TypeScript, Tailwind CSS, Vanilla CSS.
+- **Backend & APIs**: Node.js, Express, FastAPI (Python), RESTful APIs, GraphQL, Serverless Architecture.
+- **Databases & Cloud**: PostgreSQL, MongoDB, Supabase, Cloudflare R2, Vercel, AWS.
+- **Performance**: 95+ Google PageSpeed & Core Web Vitals optimization, clean bundle splitting.
+
+### 2. Store & CMS Development
+- **Shopify**: Custom Liquid theme architecture, bespoke Shopify apps, checkout & cart customization, speed optimization, high-converting CRO layouts.
+- **WordPress & WooCommerce**: Custom PHP/WordPress themes, WooCommerce custom stores, Advanced Custom Fields (ACF), REST API integrations, headless setups.
+- **Webflow**: Enterprise CMS websites, custom interactions, client-first design systems, custom JavaScript integrations.
+
+## Featured Shipped Projects
+- **VisionFit AI** (React, Express, MongoDB, Gemini/GPT-4 Vision): AI fashion SaaS with personalized style recommendations and virtual try-on brand portal. Live: https://fyp-visionfitai.vercel.app/
+- **FileForge** (Next.js, FastAPI, Cloudflare R2): High-throughput file conversion, compression, and merge utility platform. Live: https://fileforge-org.vercel.app/
+- **Kopilot.ID** (Shopify, Liquid, Custom Apps): NFC-powered emergency medical ID storefront. Live: https://www.kopilot.id/
+- **Moonfab** (Shopify, Liquid): Automotive vehicle-tailored outdoor gear storefront. Live: https://moonfab.com/
+- **Callavan** (Webflow, Supabase): Real-time driver tracking and dispatch web application. Live: https://www.callavan.live/
+- **LadyLegacy** (WordPress, WooCommerce, Squarespace): Non-profit sports platform with membership and scheduling. Live: https://legacyleague.live/
+- **Integriti-MS** (React, TypeScript, Next.js): Internal agency management system for clients, tasks, and team productivity reports.
+
+## Services Offered
+1. Full Stack Web Application Engineering (MVP to enterprise scale).
+2. Custom Shopify Store Build, Re-platforming, and Theme Development.
+3. WordPress / WooCommerce Custom Store & Corporate Site Development.
+4. Webflow CMS Site Development with Complex Interactions.
+5. Core Web Vitals & Technical SEO / Performance Auditing.
+
+## How to Hire
+Contact directly via https://hamadrafi-1.vercel.app/contact or email hamadrafi11@gmail.com.

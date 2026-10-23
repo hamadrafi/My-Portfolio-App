@@ -4,6 +4,8 @@ import "aos/dist/aos.css";
 import "./globals.css";
 import Script from "next/script";
 
+import JsonLd from "@/components/JsonLd";
+
 const CustomCursor = dynamic(() => import("@/components/CustomCursor"));
 
 const inter = Inter({
@@ -16,52 +18,61 @@ export const metadata = {
   metadataBase: new URL("https://hamadrafi-1.vercel.app"),
 
   title: {
-    default: "Hamad Rafi — Front-End Developer",
-    template: "%s | Hamad Rafi",
+    default: "Hamad Rafi — Full Stack Software Engineer | Shopify, WordPress & Webflow Specialist",
+    template: "%s | Hamad Rafi — Software Engineer",
   },
 
   description:
-    "Hamad Rafi is a Front-End Developer with 2+ years of experience building responsive, high-performance web interfaces using React, Next.js, Tailwind CSS, and modern JavaScript.",
+    "Hamad Rafi is an elite Full-Stack Software Engineer specializing in building scalable web applications with React, Next.js, and Node.js, and engineering high-converting e-commerce stores on Shopify, WordPress, and Webflow.",
 
   keywords: [
     "Hamad Rafi",
-    "Front-End Developer",
+    "Full Stack Software Engineer",
+    "Full Stack Developer",
+    "Shopify Developer",
+    "Shopify Store Developer",
+    "WordPress Developer",
+    "WooCommerce Developer",
+    "Webflow Developer",
     "React Developer",
     "Next.js Developer",
-    "Web Developer Portfolio",
-    "JavaScript Developer",
-    "Tailwind CSS",
-    "UI/UX",
-    "Responsive Web Design",
-    "Freelance Web Developer",
+    "Node.js Developer",
+    "FastAPI Python Developer",
+    "E-Commerce Web Developer",
+    "Custom Shopify Themes",
+    "Webflow CMS Specialist",
+    "Software Engineer Lahore",
+    "Hire Full Stack Developer",
+    "Hire Shopify Expert",
   ],
 
   authors: [{ name: "Hamad Rafi", url: "https://hamadrafi-1.vercel.app" }],
   creator: "Hamad Rafi",
+  publisher: "Hamad Rafi",
 
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://hamadrafi-1.vercel.app",
-    siteName: "Hamad Rafi Portfolio",
-    title: "Hamad Rafi — Front-End Developer",
+    siteName: "Hamad Rafi — Full Stack & E-Commerce Software Engineer",
+    title: "Hamad Rafi — Full Stack Software Engineer | Shopify, WordPress & Webflow Specialist",
     description:
-      "Explore the portfolio of Hamad Rafi — a Front-End Developer specialising in React, Next.js, and crafting polished web experiences.",
+      "Full-Stack Software Engineer building high-performance web applications (React, Next.js, Node.js) and custom stores on Shopify, WordPress, and Webflow.",
     images: [
       {
         url: "/imgs/preview.jpg",
         width: 1200,
         height: 630,
-        alt: "Hamad Rafi — Front-End Developer Portfolio Preview",
+        alt: "Hamad Rafi — Full Stack Software Engineer Portfolio Preview",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Hamad Rafi — Front-End Developer",
+    title: "Hamad Rafi — Full Stack Software Engineer | Shopify, WordPress & Webflow Specialist",
     description:
-      "Explore the portfolio of Hamad Rafi — a Front-End Developer specialising in React, Next.js, and crafting polished web experiences.",
+      "Full-Stack Software Engineer building high-performance web applications (React, Next.js, Node.js) and custom stores on Shopify, WordPress, and Webflow.",
     images: ["/imgs/preview.jpg"],
     creator: "@hamadrafi",
   },
@@ -87,6 +98,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
       <head>
+        <JsonLd />
         <link
           rel="preconnect"
           href="https://cdnjs.cloudflare.com"

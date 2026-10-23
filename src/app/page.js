@@ -12,51 +12,17 @@ const ClientScripts = dynamic(() => import("@/components/ClientScripts"));
 
 // ── Page-level metadata (inherits template from layout: "%s | Hamad Rafi") ──
 export const metadata = {
-  title: "Home",
+  title: "Full Stack Software Engineer | Shopify, WordPress & Webflow Developer",
   description:
-    "Welcome to the portfolio of Hamad Rafi — a Full-Stack Developer building fast, scalable, and beautiful web experiences from frontend to backend.",
+    "Hamad Rafi is a premier Full-Stack Software Engineer specializing in building scalable web applications with React, Next.js, and Node.js, and high-converting stores on Shopify, WordPress, and Webflow.",
   alternates: {
     canonical: "https://hamadrafi-1.vercel.app",
   },
 };
 
-// ── JSON-LD: Person schema for Google Knowledge Panel & rich results ──
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Hamad Rafi",
-  url: "https://hamadrafi-1.vercel.app",
-  image: "https://hamadrafi-1.vercel.app/imgs/profile-picture.png",
-  jobTitle: "Associate Software Engineer",
-  description:
-    "Hamad Rafi is an Associate Software Engineer at Integriti specialising in React, Next.js, Node.js, Shopify, WordPress, and Webflow.",
-  sameAs: [
-    "https://github.com/hamadrafi",
-    "https://www.linkedin.com/in/hamad-rafi-33b6a6260",
-  ],
-  knowsAbout: [
-    "React",
-    "Next.js",
-    "JavaScript",
-    "Node.js",
-    "Shopify",
-    "WordPress",
-    "Webflow",
-    "MongoDB",
-    "PostgreSQL",
-    "Supabase",
-    "Tailwind CSS",
-  ],
-};
-
 export default function Page() {
   return (
     <>
-      {/* Inject JSON-LD structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <ClientScripts />
       <Navbar />
 

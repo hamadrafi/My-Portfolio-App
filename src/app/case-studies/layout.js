@@ -1,9 +1,9 @@
 // Route-segment layout for /case-studies index page.
 // The index page is "use client", so metadata lives here.
 export const metadata = {
-  title: "Case Studies",
+  title: "Case Studies | Full Stack Architecture & E-Commerce Store Optimization",
   description:
-    "Deep-dive technical case studies by Hamad Rafi — covering Shopify performance optimisation, Next.js architecture, and UI/UX redesigns with real-world outcomes.",
+    "In-depth technical case studies by Hamad Rafi — covering Shopify store performance, Next.js full-stack architecture, and custom e-commerce engineering.",
   alternates: {
     canonical: "https://hamadrafi-1.vercel.app/case-studies",
   },
