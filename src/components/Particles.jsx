@@ -6,7 +6,7 @@ export default function Particles() {
   const [particles, setParticles] = useState([]);
 
   useEffect(() => {
-    const particleCount = typeof window !== "undefined" && window.innerWidth < 768 ? 75 : 150;
+    const particleCount = typeof window !== "undefined" && window.innerWidth < 768 ? 30 : 120;
 
     const newParticles = Array.from({ length: particleCount }).map((_, i) => ({
       id: i,

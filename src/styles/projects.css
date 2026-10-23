@@ -89,7 +89,6 @@
   object-fit: cover;
   display: block;
   transition: opacity 0.25s ease;
-  position: relative;
   z-index: 1;
   will-change: opacity;
   transform: translateZ(0);

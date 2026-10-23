@@ -1,12 +1,14 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VideoProjectCard from "@/components/VideoProjectCard";
-import HomeFypPreview from "@/components/HomeFypPreview";
-import ClientScripts from "@/components/ClientScripts";
-import Particles from "@/components/Particles";
 import Link from "next/link";
 import Image from "next/image";
 import { CASE_STUDIES } from "@/data/caseStudies";
+
+const Particles = dynamic(() => import("@/components/Particles"));
+const HomeFypPreview = dynamic(() => import("@/components/HomeFypPreview"));
+const ClientScripts = dynamic(() => import("@/components/ClientScripts"));
 
 // ── Page-level metadata (inherits template from layout: "%s | Hamad Rafi") ──
 export const metadata = {

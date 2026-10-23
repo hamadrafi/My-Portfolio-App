@@ -104,7 +104,6 @@ export default function HomeFypPreview() {
                 loop
                 playsInline
                 preload="none"
-                poster="/imgs/visionfitai.png"
               >
                 <source src="/imgs/vids/visionfitai.webm" type="video/webm" />
               </video>

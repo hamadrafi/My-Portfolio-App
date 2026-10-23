@@ -1,26 +1,36 @@
 "use client";
 
 import { useEffect } from "react";
-import AOS from "aos";
 
 export default function ClientScripts() {
     useEffect(() => {
-        AOS.init({
-            duration: 400,
-            once: true,
-            offset: 50,
-            easing: "ease-out",
+        import("aos").then((module) => {
+            const AOS = module.default || module;
+            AOS.init({
+                duration: 400,
+                once: true,
+                offset: 50,
+                easing: "ease-out",
+            });
         });
 
+        let ticking = false;
+        const heroGradient = document.querySelector('.hero-gradient');
+
         const handleScroll = () => {
-            const scrolled = window.pageYOffset;
-            const heroGradient = document.querySelector('.hero-gradient');
-            if (heroGradient) {
-                heroGradient.style.transform = `translateY(${scrolled * 0.5}px)`;
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    if (heroGradient) {
+                        heroGradient.style.transform = `translateY(${scrolled * 0.5}px)`;
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 

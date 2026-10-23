@@ -1,6 +1,16 @@
+import dynamic from "next/dynamic";
+import { Inter } from "next/font/google";
+import "aos/dist/aos.css";
 import "./globals.css";
-import CustomCursor from "@/components/CustomCursor";
 import Script from "next/script";
+
+const CustomCursor = dynamic(() => import("@/components/CustomCursor"));
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata = {
   metadataBase: new URL("https://hamadrafi-1.vercel.app"),
@@ -78,27 +88,28 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme="light" suppressHydrationWarning>
       <head>
         <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          rel="preconnect"
+          href="https://cdnjs.cloudflare.com"
+          crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         <link
-          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-          rel="stylesheet"
+          rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
       </head>
-      <body>
+      <body className={inter.className}>
         <CustomCursor />
         {children}
-        
-        {/* Load AOS library properly via next/script */}
-        <Script 
-          src="https://unpkg.com/aos@2.3.1/dist/aos.js" 
-          strategy="lazyOnload"
-        />
         
         {/* Inject theme script via standard script tag to avoid hydration issues */}
         <Script id="theme-loader" strategy="beforeInteractive">

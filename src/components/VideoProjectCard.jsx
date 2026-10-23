@@ -2,7 +2,8 @@
 
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
-import { getCaseStudyByProjectTitle } from "@/data/caseStudies";
+import Image from "next/image";
+import { getCaseStudySlugByProjectTitle } from "@/data/caseStudySlugs";
 
 export default function VideoProjectCard({
     title,
@@ -24,7 +25,7 @@ export default function VideoProjectCard({
     const [isPlaying, setIsPlaying] = useState(false);
 
     const resolvedSlug =
-        caseStudySlug || getCaseStudyByProjectTitle(title)?.slug || null;
+        caseStudySlug || getCaseStudySlugByProjectTitle(title) || null;
     const caseStudyHref =
         showCaseStudyLink && resolvedSlug
             ? `/case-studies/${resolvedSlug}`
@@ -100,12 +101,14 @@ export default function VideoProjectCard({
                         willChange: "opacity",
                     }}
                 />
-                <img
+                <Image
                     src={imgSrc}
                     alt={title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="poster-img"
-                    loading="lazy"
                     style={{
+                        objectFit: "cover",
                         opacity: isPlaying ? 0 : 1,
                         willChange: "opacity",
                     }}
@@ -132,8 +135,9 @@ export default function VideoProjectCard({
                                     rel="noopener noreferrer"
                                     className="project-links"
                                     title="View live project"
+                                    aria-label={`View live project for ${title}`}
                                 >
-                                    <i className="fas fa-external-link-alt"></i>
+                                    <i className="fas fa-external-link-alt" aria-hidden="true"></i>
                                 </a>
                             )}
                             {caseStudyHref && (
@@ -143,7 +147,7 @@ export default function VideoProjectCard({
                                     title="Read case study"
                                     aria-label={`Read case study for ${title}`}
                                 >
-                                    <i className="fas fa-book-open"></i>
+                                    <i className="fas fa-book-open" aria-hidden="true"></i>
                                 </Link>
                             )}
                             {githubLink && (
@@ -153,8 +157,9 @@ export default function VideoProjectCard({
                                     rel="noopener noreferrer"
                                     className="project-links"
                                     title="View on GitHub"
+                                    aria-label={`View ${title} on GitHub`}
                                 >
-                                    <i className="fab fa-github"></i>
+                                    <i className="fab fa-github" aria-hidden="true"></i>
                                 </a>
                             )}
                         </div>

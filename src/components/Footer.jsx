@@ -15,7 +15,7 @@ export default function Footer() {
                     </div>
                     <div className="footer-links">
                         <div className="footer-section">
-                            <h4>Navigation</h4>
+                            <h3>Navigation</h3>
                             <ul>
                                 <li><Link href="/">Home</Link></li>
                                 <li><Link href="/about">About</Link></li>
@@ -26,10 +26,10 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div className="footer-section">
-                            <h4>Connect</h4>
+                            <h3>Connect</h3>
                             <ul>
                                 <li>
-                                    <a href="https://www.linkedin.com/in/hamad-rafi-33b6a6260 " target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.linkedin.com/in/hamad-rafi-33b6a6260" target="_blank" rel="noopener noreferrer">
                                         LinkedIn
                                     </a>
                                 </li>
@@ -47,14 +47,32 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="footer-social">
-                        <a href="https://www.linkedin.com/in/hamad-rafi-33b6a6260 " target="_blank" rel="noopener noreferrer" className="social-link">
-                            <i className="fab fa-linkedin"></i>
+                        <a 
+                            href="https://www.linkedin.com/in/hamad-rafi-33b6a6260" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="social-link"
+                            aria-label="LinkedIn"
+                        >
+                            <i className="fab fa-linkedin" aria-hidden="true"></i>
                         </a>
-                        <a href="https://github.com/hamadrafi" target="_blank" rel="noopener noreferrer" className="social-link">
-                            <i className="fab fa-github"></i>
+                        <a 
+                            href="https://github.com/hamadrafi" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="social-link"
+                            aria-label="GitHub"
+                        >
+                            <i className="fab fa-github" aria-hidden="true"></i>
                         </a>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hamadrafi11@gmail.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                            <i className="fas fa-envelope"></i>
+                        <a 
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=hamadrafi11@gmail.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="social-link"
+                            aria-label="Email"
+                        >
+                            <i className="fas fa-envelope" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
