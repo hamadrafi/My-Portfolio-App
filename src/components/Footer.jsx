@@ -39,7 +39,7 @@ export default function Footer() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hamadrafi11@gmail.com" target="_blank" rel="noopener noreferrer">
+                                    <a href="mailto:hamadrafi11@gmail.com">
                                         Mail
                                     </a>
                                 </li>
@@ -66,9 +66,7 @@ export default function Footer() {
                             <i className="fab fa-github" aria-hidden="true"></i>
                         </a>
                         <a 
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=hamadrafi11@gmail.com" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                            href="mailto:hamadrafi11@gmail.com" 
                             className="social-link"
                             aria-label="Email"
                         >

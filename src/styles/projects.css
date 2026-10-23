@@ -210,7 +210,8 @@
 }
 
 .filter-btn .count {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 13px;
@@ -219,6 +220,7 @@
 
 .filter-btn.active .count {
   background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
 }
 
 .project-card.hidden {

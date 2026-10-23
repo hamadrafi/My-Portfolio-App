@@ -192,7 +192,7 @@ export default function Contact() {
                                 <i className="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hamadrafi11@gmail.com" target="_blank" className="social-btn twitter">
+                            <a href="mailto:hamadrafi11@gmail.com" className="social-btn twitter">
                                 <i className="fas fa-envelope"></i>
                                 <span>Mail</span>
                             </a>

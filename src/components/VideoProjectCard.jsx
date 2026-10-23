@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { getCaseStudySlugByProjectTitle } from "@/data/caseStudySlugs";
@@ -31,37 +31,14 @@ export default function VideoProjectCard({
             ? `/case-studies/${resolvedSlug}`
             : null;
 
-    useEffect(() => {
-        const video = videoRef.current;
-        if (!video) return;
-
-        if (loadEager) {
-            video.preload = "auto";
-            video.load();
-            return;
-        }
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        video.preload = "auto";
-                        video.load();
-                        observer.disconnect();
-                    }
-                });
-            },
-            { rootMargin: "200px" }
-        );
-
-        if (wrapperRef.current) observer.observe(wrapperRef.current);
-        return () => observer.disconnect();
-    }, [loadEager]);
-
     const handleMouseEnter = () => {
-        if (videoRef.current) {
-            videoRef.current.play().catch(() => {});
-            if (videoRef.current.readyState >= 3) {
+        const video = videoRef.current;
+        if (video) {
+            if (video.preload !== "auto") {
+                video.preload = "auto";
+            }
+            video.play().catch(() => {});
+            if (video.readyState >= 3) {
                 setIsPlaying(true);
             }
         }
@@ -105,7 +82,8 @@ export default function VideoProjectCard({
                     src={imgSrc}
                     alt={title}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={loadEager}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
                     className="poster-img"
                     style={{
                         objectFit: "cover",

@@ -60,7 +60,8 @@ export default function Page() {
       <ClientScripts />
       <Navbar />
 
-      {/* Hero Section */}
+      <main id="main-content">
+        {/* Hero Section */}
       <section className="hero" id="home">
         <div className="hero-background">
           <div className="hero-gradient"></div>
@@ -345,6 +346,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

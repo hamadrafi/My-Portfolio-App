@@ -58,11 +58,23 @@
   --gradient-primary: linear-gradient(135deg, #0a1e77 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --filter-color: rgb(110, 115, 130);
-  --filter-color-hover: rgb(85, 90, 105);
+  --filter-color: #475569;
+  --filter-color-hover: #334155;
   --star-color: var(--primary-color);
   --star-glow: rgba(10, 30, 119, 0.2);
   --project-title: var(--primary-color);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 [data-theme="dark"] {

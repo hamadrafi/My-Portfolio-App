@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import VideoProjectCard from "./VideoProjectCard";
-import AOS from "aos";
 
 const PROJECTS = [
     {
@@ -372,13 +371,17 @@ export default function ProjectsShowcase() {
     const handleFilterChange = (category) => {
         setFilter(category);
         setTimeout(() => {
-            AOS.refresh();
+            import("aos").then((module) => {
+                const AOS = module.default || module;
+                AOS.refresh();
+            });
         }, 100);
     };
 
     return (
         <section className="projects-section">
             <div className="container">
+                <h2 className="sr-only">Project List</h2>
                 <div className="filter-container">
                     <button
                         className={`filter-btn ${filter === "all" ? "active" : ""}`}
