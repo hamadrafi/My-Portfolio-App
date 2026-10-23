@@ -37,10 +37,11 @@ export default function Page() {
           <div className="hero-image" data-aos="fade-up" data-aos-delay="100">
             <Image
                 src="/imgs/profile-picture.png"
-                alt="Hamad Rafi — Front-End Developer"
+                alt="Hamad Rafi — Full Stack Software Engineer"
                 width={260}
                 height={260}
                 priority
+                itemProp="image"
                 className="profile-image"
               />
             <div className="image-border"></div>

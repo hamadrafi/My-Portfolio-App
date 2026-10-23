@@ -43,7 +43,7 @@ export const metadata = {
   publisher: "Hamad Rafi",
 
   openGraph: {
-    type: "website",
+    type: "profile",
     locale: "en_US",
     url: "https://hamadrafi-1.vercel.app",
     siteName: "Hamad Rafi — Full Stack & E-Commerce Software Engineer",
@@ -52,10 +52,11 @@ export const metadata = {
       "Full-Stack Software Engineer building high-performance web applications (React, Next.js, Node.js) and custom stores on Shopify, WordPress, and Webflow.",
     images: [
       {
-        url: "/imgs/preview.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Hamad Rafi — Full Stack Software Engineer Portfolio Preview",
+        url: "https://hamadrafi-1.vercel.app/imgs/profile-picture.png",
+        width: 800,
+        height: 800,
+        alt: "Hamad Rafi — Full Stack Software Engineer Profile Photo",
+        type: "image/png",
       },
     ],
   },
@@ -65,7 +66,7 @@ export const metadata = {
     title: "Hamad Rafi — Full Stack Software Engineer | Shopify, WordPress & Webflow Specialist",
     description:
       "Full-Stack Software Engineer building high-performance web applications (React, Next.js, Node.js) and custom stores on Shopify, WordPress, and Webflow.",
-    images: ["/imgs/preview.jpg"],
+    images: ["https://hamadrafi-1.vercel.app/imgs/profile-picture.png"],
     creator: "@hamadrafi",
   },
 

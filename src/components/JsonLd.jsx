@@ -8,7 +8,16 @@ export default function JsonLd() {
         "name": "Hamad Rafi",
         "alternateName": ["Muhammad Hamad Rafi", "Hamad"],
         "url": "https://hamadrafi-1.vercel.app",
-        "image": "https://hamadrafi-1.vercel.app/imgs/profile-picture.png",
+        "image": {
+          "@type": "ImageObject",
+          "@id": "https://hamadrafi-1.vercel.app/#personImage",
+          "url": "https://hamadrafi-1.vercel.app/imgs/profile-picture.png",
+          "contentUrl": "https://hamadrafi-1.vercel.app/imgs/profile-picture.png",
+          "caption": "Hamad Rafi - Full Stack Software Engineer Profile Photo",
+          "inLanguage": "en-US",
+          "width": "800",
+          "height": "800"
+        },
         "jobTitle": "Full Stack Software Engineer & E-Commerce Specialist",
         "description": "Hamad Rafi is an elite Software Engineer specializing in building full-stack web applications with React, Next.js, and Node.js, and engineering high-converting e-commerce stores on Shopify, WordPress, and Webflow.",
         "email": "mailto:hamadrafi11@gmail.com",
