@@ -58,6 +58,7 @@ export default function Contact() {
       <ClientScripts />
       <Navbar />
 
+      <main id="main-content">
       {/* Page Header */}
       <section className="page-header">
         <div className="container">
@@ -242,6 +243,7 @@ export default function Contact() {
           </div>
         </div>
       )}
+      </main>
 
       <Footer />
     </>

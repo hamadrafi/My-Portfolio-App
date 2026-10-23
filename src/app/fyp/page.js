@@ -76,6 +76,7 @@ export default function FypPage() {
       <ClientScripts />
       <Navbar />
 
+      <main id="main-content">
       <section className="fyp-hero">
         <div className="container">
           <div className="fyp-hero-grid">
@@ -265,6 +266,7 @@ export default function FypPage() {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

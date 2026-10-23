@@ -18,6 +18,7 @@ export default function About() {
       <ClientScripts />
       <Navbar />
 
+      <main id="main-content">
       {/* Page Header */}
       <section className="page-header">
         <div className="container">
@@ -364,6 +365,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

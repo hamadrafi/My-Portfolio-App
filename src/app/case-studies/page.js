@@ -11,6 +11,7 @@ export default function CaseStudiesPage() {
             <ClientScripts />
             <Navbar />
 
+            <main id="main-content">
             <section className="page-header case-studies-hero">
                 <div className="container">
                     <div className="header-content" data-aos="fade-up">
@@ -37,6 +38,7 @@ export default function CaseStudiesPage() {
                     </div>
                 </div>
             </section>
+            </main>
 
             <Footer />
         </>
