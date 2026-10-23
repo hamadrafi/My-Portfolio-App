@@ -1,7 +1,9 @@
+// Route-segment layout: metadata lives here so the "use client"
+// FYP page can still be a Client Component.
 export const metadata = {
-  title: "FYP — VisionFit AI",
+  title: "VisionFit AI | Final Year Full Stack AI SaaS Project",
   description:
-    "VisionFit AI is Hamad Rafi's Final Year Project: an AI-powered fashion SaaS with style analysis, personalized recommendations, virtual try-on, and a brand portal.",
+    "VisionFit AI is an AI-powered fashion recommendation & virtual try-on SaaS engineered by Hamad Rafi. Built with React, Node.js, Express, MongoDB, and AI computer vision.",
   alternates: {
     canonical: "https://hamadrafi-1.vercel.app/fyp",
   },
