@@ -62,7 +62,7 @@ export default function Page() {
                 <span>View My Work</span>
                 <i className="fas fa-arrow-right"></i>
               </Link>
-              <a href="/Hamad%20-%20Software%20Engineer.pdf" className="btn btn-secondary" download>
+              <a href="/Hamad%20Rafi%20-%20Software%20Engineer.pdf" className="btn btn-secondary" download>
                 <i className="fas fa-download"></i>
                 <span>Download Resume</span>
               </a>
